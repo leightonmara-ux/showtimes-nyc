@@ -1,0 +1,701 @@
+{
+  "verified": "2026-10-21",
+  "events": [
+    {
+      "id": "paris-lee-chang-dong-2026",
+      "name": "Freedom and Desire: The Films of Lee Chang-dong",
+      "kind": "retrospective",
+      "start": "2026-09-26",
+      "end": "2026-11-24",
+      "dates_confirmed": true,
+      "theaters": [
+        "paris"
+      ],
+      "venues": "The Paris Theater",
+      "url": "https://www.paristheaternyc.com/series/lee-chang-dong-paris",
+      "blurb": "The first NYC retrospective of all eight Lee Chang-dong features. It closes Nov 24 with Possible Love on 35mm plus the U.S. premiere of his short Heartbeat.",
+      "tickets": [
+        {
+          "label": "Tickets on sale for remaining shows",
+          "date": null,
+          "time": null,
+          "confirmed": true,
+          "note": "Poetry (Nov 4), Burning (Nov 23), and Possible Love + Heartbeat (Nov 24) are listed with tickets",
+          "on_sale": true
+        }
+      ],
+      "tips": "The Nov 24 35mm closer is the one most likely to sell out at the Paris.",
+      "match": {
+        "keywords": [
+          "Lee Chang-dong",
+          "Freedom and Desire"
+        ],
+        "series": [
+          "Freedom and Desire",
+          "Lee Chang-dong"
+        ],
+        "titles": [
+          "Green Fish",
+          "Peppermint Candy",
+          "Oasis",
+          "Secret Sunshine",
+          "Poetry",
+          "Burning",
+          "Possible Love",
+          "Heartbeat"
+        ]
+      }
+    },
+    {
+      "id": "newfest-2026",
+      "name": "NewFest 38: The New York LGBTQ+ Film Festival",
+      "kind": "festival",
+      "start": "2026-10-15",
+      "end": "2026-10-25",
+      "dates_confirmed": true,
+      "theaters": [
+        "bam",
+        "nitehawk-prospect-park"
+      ],
+      "venues": "SVA Theatre (hub), BAM Rose Cinemas (Oct 16-22), Nitehawk Prospect Park, other Manhattan/Brooklyn venues",
+      "url": "https://newfest.org/festival/",
+      "blurb": "New York's main LGBTQ+ film festival, now in its 38th edition and running through Oct 25.",
+      "tickets": [
+        {
+          "label": "Tickets on sale",
+          "date": null,
+          "time": null,
+          "confirmed": true,
+          "note": "newfest.org says tickets are on sale now; the original on-sale date isn't stated.",
+          "on_sale": true
+        }
+      ],
+      "tips": "The festival is already running. Buy remaining screenings at newfest.org, or through BAM and Nitehawk for their NewFest shows.",
+      "match": {
+        "keywords": [
+          "NewFest"
+        ],
+        "series": [
+          "NewFest"
+        ],
+        "urls": [
+          "newfest.org"
+        ]
+      }
+    },
+    {
+      "id": "filmforum-william-greaves-100",
+      "name": "William Greaves 100",
+      "kind": "retrospective",
+      "start": "2026-10-23",
+      "end": "2026-10-29",
+      "dates_confirmed": true,
+      "theaters": [
+        "filmforum"
+      ],
+      "venues": "Film Forum",
+      "url": "https://filmforum.org/series/william-greaves-100",
+      "blurb": "Centennial retrospective of the documentary pioneer (Symbiopsychotaxiplasm, Nationtime), timed to the release of his posthumous Once Upon a Time in Harlem at FLC and BAM.",
+      "tickets": [
+        {
+          "label": "Tickets on sale",
+          "date": null,
+          "time": null,
+          "confirmed": true,
+          "note": "Listed with showtimes and tickets on filmforum.org as of the check date",
+          "on_sale": true
+        }
+      ],
+      "tips": "The Oct 23 Nationtime screening has an introduction by Liani Greaves and Sandra Schulberg.",
+      "match": {
+        "keywords": [
+          "William Greaves 100"
+        ],
+        "series": [
+          "William Greaves 100"
+        ],
+        "titles": [
+          "Frederick Douglass",
+          "From These Roots",
+          "In the Company of Men",
+          "Lost Boundaries",
+          "Miracle in Harlem",
+          "Nationtime",
+          "Profile of a Problem Drinker",
+          "Ralph Bunche",
+          "Souls of Sin",
+          "Still a Brother",
+          "Symbiopsychotaxiplasm",
+          "Colored Harvest",
+          "First World Festival",
+          "Voice of La Raza",
+          "Where Dreams Come True",
+          "You've Got a Number"
+        ]
+      }
+    },
+    {
+      "id": "bam-area-coded-2026",
+      "name": "Area Coded: American Regionalism in Film",
+      "kind": "series",
+      "start": "2026-10-23",
+      "end": "2026-10-29",
+      "dates_confirmed": true,
+      "theaters": [
+        "bam"
+      ],
+      "venues": "BAM Rose Cinemas",
+      "url": "https://www.bam.org/film",
+      "blurb": "BAM series on specific American places, with films including The Texas Chain Saw Massacre, Eve's Bayou, Grey Gardens, Giant, and Ruby in Paradise.",
+      "tickets": [],
+      "match": {
+        "keywords": [
+          "Area Coded"
+        ],
+        "series": [
+          "Area Coded"
+        ]
+      }
+    },
+    {
+      "id": "ifc-optic-nerve-2026",
+      "name": "Optic Nerve: A Tribute to Glass Eye Pix",
+      "kind": "series",
+      "start": "2026-10-28",
+      "end": "2026-11-03",
+      "dates_confirmed": true,
+      "theaters": [
+        "ifc"
+      ],
+      "venues": "IFC Center",
+      "url": "https://www.ifccenter.com/",
+      "blurb": "Tribute to 40 years of Larry Fessenden's indie horror label Glass Eye Pix, running over Halloween week.",
+      "tickets": [
+        {
+          "label": "Tickets on sale",
+          "date": null,
+          "time": null,
+          "confirmed": true,
+          "note": "IFC Center lists 'Tickets on sale now!'",
+          "on_sale": true
+        }
+      ],
+      "match": {
+        "keywords": [
+          "Optic Nerve",
+          "Glass Eye Pix"
+        ],
+        "series": [
+          "Optic Nerve"
+        ]
+      }
+    },
+    {
+      "id": "bam-spirit-compels-her-2026",
+      "name": "The Spirit Compels Her: Possession and the Demonization of Women",
+      "kind": "series",
+      "start": "2026-10-30",
+      "end": "2026-11-05",
+      "dates_confirmed": true,
+      "theaters": [
+        "bam"
+      ],
+      "venues": "BAM Rose Cinemas",
+      "url": "https://www.bam.org/film",
+      "blurb": "BAM series on women and girls accused of possession, which pairs with the Devils restoration.",
+      "tickets": [],
+      "match": {
+        "keywords": [
+          "The Spirit Compels Her"
+        ],
+        "series": [
+          "The Spirit Compels Her"
+        ]
+      }
+    },
+    {
+      "id": "doc-nyc-2026",
+      "name": "DOC NYC",
+      "kind": "festival",
+      "start": "2026-11-11",
+      "end": "2026-11-19",
+      "dates_confirmed": true,
+      "theaters": [
+        "ifc"
+      ],
+      "venues": "IFC Center, SVA Theatre, Village East by Angelika (in person Nov 11-19); online through Nov 29",
+      "url": "https://www.docnyc.net/",
+      "blurb": "America's largest documentary festival (17th edition) and a key stop for Oscar-season docs. Opening night is The Hummingbird Paints Fragrant Songs, with 200+ films.",
+      "tickets": [
+        {
+          "label": "Online Film Pass early-bird ends",
+          "date": "2026-10-18",
+          "time": null,
+          "confirmed": true,
+          "note": "$199 early bird through Oct 18, then $250"
+        },
+        {
+          "label": "Tickets & passes on sale online",
+          "date": null,
+          "time": null,
+          "confirmed": true,
+          "note": "'Tickets and passes are available for purchase online now' (docnyc.net).",
+          "on_sale": true
+        },
+        {
+          "label": "In-person box office opens",
+          "date": "2026-11-07",
+          "time": null,
+          "confirmed": true,
+          "note": "In-person ticket and pass sales start at the IFC Center box office"
+        }
+      ],
+      "tips": "IFC Center members pay member prices ($16 regular, $25 for gala screenings) with no online fee. The 10-ticket pack ($170) excludes opening, centerpiece, and closing nights.",
+      "match": {
+        "keywords": [
+          "DOC NYC"
+        ],
+        "series": [
+          "DOC NYC"
+        ]
+      }
+    },
+    {
+      "id": "filmlinc-hamaguchi-all-of-a-sudden-2026",
+      "name": "All of a Sudden: Hamaguchi in-person sneak previews",
+      "kind": "special",
+      "start": "2026-11-18",
+      "end": "2026-11-19",
+      "dates_confirmed": true,
+      "theaters": [
+        "filmlinc"
+      ],
+      "venues": "Film at Lincoln Center",
+      "url": "https://www.filmlinc.org/daily/film-at-lincoln-center-unveils-fall-winter-2026-lineup/",
+      "blurb": "Ryusuke Hamaguchi and Tao Okamoto appear in person at sneak previews of his 196-minute Cannes winner, before it opens at FLC Nov 25.",
+      "tickets": [],
+      "tips": "FLC members get pre-sale access to FLC events. Watch filmlinc.org for the on-sale date, which wasn't announced as of Oct 21.",
+      "match": {
+        "keywords": [
+          "All of a Sudden"
+        ],
+        "series": []
+      }
+    },
+    {
+      "id": "filmforum-rossellini-120-2026",
+      "name": "Rossellini 120",
+      "kind": "retrospective",
+      "start": "2026-11-20",
+      "end": "2026-12-10",
+      "dates_confirmed": true,
+      "theaters": [
+        "filmforum"
+      ],
+      "venues": "Film Forum",
+      "url": "https://filmforum.org/series/rossellini",
+      "blurb": "A 26-film Roberto Rossellini retrospective for his 120th birthday, co-presented with Cinecitta.",
+      "tickets": [],
+      "tips": "Film Forum didn't list an on-sale date as of Oct 21. Members pay $12 vs $18 general.",
+      "match": {
+        "keywords": [
+          "Rossellini 120"
+        ],
+        "series": [
+          "Rossellini 120",
+          "Rossellini"
+        ]
+      }
+    },
+    {
+      "id": "film-comment-live-2026",
+      "name": "Film Comment Live: Best of 2026",
+      "kind": "special",
+      "start": "2026-12-10",
+      "end": "2026-12-10",
+      "dates_confirmed": true,
+      "theaters": [
+        "filmlinc"
+      ],
+      "venues": "Film at Lincoln Center",
+      "url": "https://www.filmlinc.org/daily/film-at-lincoln-center-unveils-fall-winter-2026-lineup/",
+      "blurb": "Film Comment's annual live countdown of its year-end critics' poll, with the editors and guests.",
+      "tickets": [],
+      "tips": "FLC says Film Comment subscribers get first access to tickets.",
+      "match": {
+        "keywords": [
+          "Film Comment Live"
+        ],
+        "series": []
+      }
+    },
+    {
+      "id": "nyjff-2027",
+      "name": "New York Jewish Film Festival",
+      "kind": "festival",
+      "start": "2027-01-13",
+      "end": "2027-01-27",
+      "dates_confirmed": false,
+      "theaters": [
+        "filmlinc"
+      ],
+      "venues": "Walter Reade Theater, Film at Lincoln Center",
+      "url": "https://www.filmlinc.org/festivals/new-york-jewish-film-festival/",
+      "blurb": "Annual January festival from the Jewish Museum and FLC. 2027 dates aren't announced; the 2026 edition ran Jan 14-28 and 2025 ran Jan 15-29.",
+      "tickets": [
+        {
+          "label": "FLC & Jewish Museum member early access",
+          "date": "2026-12-15",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when member early access began Tue Dec 16 at noon after a Dec 11 lineup announcement"
+        },
+        {
+          "label": "General on-sale",
+          "date": "2026-12-17",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when the general on-sale was Thu Dec 18 at noon"
+        }
+      ],
+      "tips": "The opening film is priced higher and usually goes first. The 3+ film package saves a few dollars per ticket.",
+      "match": {
+        "keywords": [
+          "New York Jewish Film Festival",
+          "NYJFF"
+        ],
+        "series": [
+          "New York Jewish Film Festival"
+        ]
+      }
+    },
+    {
+      "id": "rendez-vous-2027",
+      "name": "Rendez-Vous with French Cinema",
+      "kind": "festival",
+      "start": "2027-03-04",
+      "end": "2027-03-14",
+      "dates_confirmed": false,
+      "theaters": [
+        "filmlinc"
+      ],
+      "venues": "Film at Lincoln Center (some events at partner venues; 2026 included a Metrograph event)",
+      "url": "https://www.filmlinc.org/daily/category/festivals/rendez-vous/",
+      "blurb": "FLC and Unifrance's annual showcase of new French cinema. FLC has confirmed it returns in 2027, but not the dates; 2026 ran Mar 5-15.",
+      "tickets": [
+        {
+          "label": "FLC member pre-sale",
+          "date": "2027-02-01",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when the member pre-sale was Mon Feb 2 at noon after a Jan 29 lineup announcement"
+        },
+        {
+          "label": "General on-sale",
+          "date": "2027-02-03",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when the general on-sale was Wed Feb 4 at noon"
+        }
+      ],
+      "match": {
+        "keywords": [
+          "Rendez-Vous with French Cinema"
+        ],
+        "series": [
+          "Rendez-Vous with French Cinema"
+        ]
+      }
+    },
+    {
+      "id": "ndnf-2027",
+      "name": "New Directors/New Films",
+      "kind": "festival",
+      "start": "2027-04-07",
+      "end": "2027-04-18",
+      "dates_confirmed": false,
+      "theaters": [
+        "filmlinc"
+      ],
+      "venues": "Film at Lincoln Center and MoMA",
+      "url": "https://www.filmlinc.org/new-directors-new-films/",
+      "blurb": "FLC and MoMA's festival of first and second features. FLC has confirmed it returns in 2027, but not the dates; 2026 ran Apr 8-19 and 2025 ran Apr 2-13.",
+      "tickets": [
+        {
+          "label": "FLC & MoMA member early access",
+          "date": "2027-03-10",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when member early access was Wed Mar 11 at noon after a Mar 10 lineup announcement"
+        },
+        {
+          "label": "General on-sale",
+          "date": "2027-03-12",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when the general on-sale was Fri Mar 13 at noon"
+        }
+      ],
+      "tips": "The lineup is announced only about two days before member presale, so watch for the announcement in early March.",
+      "match": {
+        "keywords": [
+          "New Directors/New Films",
+          "ND/NF",
+          "NDNF"
+        ],
+        "series": [
+          "New Directors/New Films"
+        ]
+      }
+    },
+    {
+      "id": "open-roads-2027",
+      "name": "Open Roads: New Italian Cinema",
+      "kind": "festival",
+      "start": "2027-05-27",
+      "end": "2027-06-03",
+      "dates_confirmed": false,
+      "theaters": [
+        "filmlinc"
+      ],
+      "venues": "Film at Lincoln Center",
+      "url": "https://www.filmlinc.org/festivals/open-roads-new-italian-cinema/",
+      "blurb": "FLC and Cinecitta's annual showcase of new Italian films. 2027 dates aren't announced; the 25th edition in 2026 ran May 28-Jun 4.",
+      "tickets": [
+        {
+          "label": "Lineup announcement / on-sale",
+          "date": "2027-04-28",
+          "time": null,
+          "confirmed": false,
+          "note": "Rough estimate. The 2026 lineup was announced Apr 29, but the announcement didn't give an on-sale date. FLC members usually get presale a couple of days before the general sale."
+        }
+      ],
+      "tips": "An All-Access Pass was $140 ($120 for FLC members) in 2026.",
+      "match": {
+        "keywords": [
+          "Open Roads"
+        ],
+        "series": [
+          "Open Roads"
+        ]
+      }
+    },
+    {
+      "id": "brooklyn-film-festival-2027",
+      "name": "Brooklyn Film Festival (30th edition)",
+      "kind": "festival",
+      "start": "2027-05-28",
+      "end": "2027-06-06",
+      "dates_confirmed": false,
+      "theaters": [],
+      "venues": "2026 venues: BRIC (Fort Greene), 100 Sutton Studios (Greenpoint), Wythe Hotel (Williamsburg), plus online",
+      "url": "https://www.brooklynfilmfestival.org/",
+      "blurb": "Brooklyn's long-running international competitive festival. 2027 dates aren't announced; the 2026 edition ran May 29-Jun 7.",
+      "tickets": [],
+      "tips": "No ticketing history was found. Check the site in spring 2027.",
+      "match": {
+        "keywords": [
+          "Brooklyn Film Festival"
+        ],
+        "series": [
+          "Brooklyn Film Festival"
+        ]
+      }
+    },
+    {
+      "id": "tribeca-2027",
+      "name": "Tribeca Festival",
+      "kind": "festival",
+      "start": "2027-06-03",
+      "end": "2027-06-12",
+      "dates_confirmed": true,
+      "theaters": [],
+      "venues": "Lower Manhattan and venues citywide (venues TBA)",
+      "url": "https://tribecafilm.com/press-center/press-releases/tribeca-festival-announces-2027-dates-and-calls-for-submissions",
+      "blurb": "The 26th Tribeca Festival: film premieres, talks, and immersive work. Dates are officially announced.",
+      "tickets": [
+        {
+          "label": "Festival passes on sale",
+          "date": "2026-09-30",
+          "time": null,
+          "confirmed": true,
+          "note": "Passes went on sale Sept 30, 2026, including Hudson All-Access, a new Hudson Opening Weekend pass, an Under 25 pass, and 8- or 12-ticket packages"
+        },
+        {
+          "label": "10% early discount on Hudson All-Access & ticket packages ends",
+          "date": "2026-10-04",
+          "time": null,
+          "confirmed": true
+        },
+        {
+          "label": "Ticket packages go off sale",
+          "date": "2027-04-19",
+          "time": "20:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when packages went off sale Mon Apr 20 at 8pm ET"
+        },
+        {
+          "label": "Member & package early redemption",
+          "date": "2027-04-22",
+          "time": "11:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when early redemption opened Thu Apr 23 at 11am ET"
+        },
+        {
+          "label": "Single tickets on sale",
+          "date": "2027-04-27",
+          "time": "11:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when single tickets went on sale Tue Apr 28 at 11am ET"
+        }
+      ],
+      "tips": "Buy an 8- or 12-ticket package before packages go off sale in April. That gets you early redemption before single tickets go on sale.",
+      "match": {
+        "keywords": [
+          "Tribeca Festival",
+          "Tribeca Film Festival"
+        ],
+        "series": [
+          "Tribeca"
+        ]
+      }
+    },
+    {
+      "id": "bamcinemafest-2027",
+      "name": "BAMcinemaFest",
+      "kind": "festival",
+      "start": "2027-06-16",
+      "end": "2027-06-27",
+      "dates_confirmed": false,
+      "theaters": [
+        "bam"
+      ],
+      "venues": "BAM Rose Cinemas",
+      "url": "https://www.bam.org/film",
+      "blurb": "BAM's summer festival of American independent film. Status is unclear: BAM's 2026 film calendar has no 2026 edition, so it may be on hiatus. These are placeholder late-June dates based on past editions.",
+      "tickets": [],
+      "tips": "Not confirmed to be returning. Treat it as watch-only until BAM announces it.",
+      "match": {
+        "keywords": [
+          "BAMcinemaFest"
+        ],
+        "series": [
+          "BAMcinemaFest"
+        ]
+      }
+    },
+    {
+      "id": "japan-cuts-2027",
+      "name": "JAPAN CUTS",
+      "kind": "festival",
+      "start": "2027-07-07",
+      "end": "2027-07-17",
+      "dates_confirmed": false,
+      "theaters": [],
+      "venues": "Japan Society (333 E 47th St)",
+      "url": "https://japansociety.org/film/japancuts/",
+      "blurb": "North America's largest festival of new Japanese film. 2027 dates aren't announced; the 2026 edition ran Jul 8-18.",
+      "tickets": [
+        {
+          "label": "Japan Society member presale",
+          "date": "2027-06-02",
+          "time": null,
+          "confirmed": false,
+          "note": "Rough estimate. In 2026, members could buy before the general sale, but the member start date wasn't found."
+        },
+        {
+          "label": "General on-sale",
+          "date": "2027-06-09",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when the general sale opened Jun 10 at noon"
+        }
+      ],
+      "tips": "The Festival Pass ($350 in 2026) is for members only, and the opening night sold out in 2026.",
+      "match": {
+        "keywords": [
+          "Japan Cuts"
+        ],
+        "series": [
+          "Japan Cuts"
+        ]
+      }
+    },
+    {
+      "id": "nyff-2027",
+      "name": "New York Film Festival (NYFF65)",
+      "kind": "festival",
+      "start": "2027-09-24",
+      "end": "2027-10-11",
+      "dates_confirmed": false,
+      "theaters": [
+        "filmlinc"
+      ],
+      "venues": "Film at Lincoln Center (Alice Tully Hall, Walter Reade Theater) and partner venues; BAM has hosted an NYFF series",
+      "url": "https://www.filmlinc.org/nyff/",
+      "blurb": "North America's flagship curated festival. 2027 dates aren't announced; NYFF64 ran Sept 25-Oct 12, 2026 (a Friday to a Monday) and NYFF63 ran Sept 26-Oct 13, 2025.",
+      "tickets": [
+        {
+          "label": "Join FLC membership for presale",
+          "date": "2027-08-27",
+          "time": null,
+          "confirmed": false,
+          "note": "Estimate. In 2026, you had to join by Aug 28 to get NYFF pre-sale access."
+        },
+        {
+          "label": "VIP patron & top-tier pass presales begin",
+          "date": "2027-08-30",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on the 2026 schedule, which started Mon Aug 31 (Premiere Circle) and ran through Sept 4 for patrons and Gold/Bronze Pass holders"
+        },
+        {
+          "label": "Pass holder presales",
+          "date": "2027-09-07",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026: Premier Pass Sept 8, Centerpiece/Closing Night Plus and 12-Ticket Pass Sept 9, Opening Night Plus Sept 10, 6-Ticket Pass Sept 11"
+        },
+        {
+          "label": "Angel member presale",
+          "date": "2027-09-09",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when it was Thu Sept 10 at noon"
+        },
+        {
+          "label": "Friend member presale",
+          "date": "2027-09-10",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when it was Fri Sept 11 at noon"
+        },
+        {
+          "label": "Contributor member presale",
+          "date": "2027-09-13",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when it was Mon Sept 14 at noon"
+        },
+        {
+          "label": "General on-sale",
+          "date": "2027-09-14",
+          "time": "12:00",
+          "confirmed": false,
+          "note": "Estimate based on 2026, when it was Tue Sept 15 at noon ET, also for Innovator members and FLC 25 & Under"
+        }
+      ],
+      "tips": "Opening, Centerpiece, and Closing nights sell out during presales. Friend-level membership or higher gets you in days before the public sale. Expect a virtual waiting room, and log in to your FLC account before your window opens.",
+      "match": {
+        "keywords": [
+          "NYFF65",
+          "65th New York Film Festival"
+        ],
+        "series": [
+          "65th New York Film Festival",
+          "NYFF65"
+        ]
+      }
+    }
+  ]
+}

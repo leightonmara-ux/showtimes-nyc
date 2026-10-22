@@ -1,0 +1,57 @@
+# Rebuild the showtimes site every two hours and publish it to GitHub Pages.
+name: Refresh showtimes
+
+on:
+  schedule:
+    - cron: "17 */2 * * *"   # every 2 hours (UTC), off the hour
+  workflow_dispatch:          # "Run workflow" button for a manual refresh
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Ratings are looked up once per film and reused; keep that cache between runs.
+      - uses: actions/cache@v4
+        with:
+          path: |
+            showtimes/ratings.json
+            showtimes/imdb_ratings.tsv.gz
+          key: ratings-${{ github.run_id }}
+          restore-keys: ratings-
+
+      - name: Scrape theaters and build the site
+        working-directory: showtimes
+        env:
+          TZ: America/New_York
+        run: python build.py
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: showtimes/static
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

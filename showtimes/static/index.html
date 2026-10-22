@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14110f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Showtimes">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-180.png">
+<title>Showtimes</title>
+<style>
+  :root {
+    --bg: #f6f1ea; --surface: #fffdf9; --ink: #1d1916; --muted: #776d63; --line: #e4dbcf;
+    --accent: #c2361f; --pill: #f0e8dd; --pill-ink: #1d1916; --past: #b9afa4;
+    --gold: #c9971f; --gold-bg: #fbefcf; --gold-ink: #7a5600;
+    --lb: #0f7a3d; --lb-bg: #dcf3e4; --im: #6b5200; --im-bg: #f8e7a8;
+    --r: 14px;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14110f; --surface: #1e1a17; --ink: #f2ebe2; --muted: #9a8f84; --line: #2e2824;
+      --accent: #ff6a4d; --pill: #2a2420; --pill-ink: #f2ebe2; --past: #5a514a;
+      --gold: #d9a93a; --gold-bg: #33290f; --gold-ink: #f0c867;
+      --lb: #4fd98a; --lb-bg: #12301f; --im: #f5c518; --im-bg: #33290a;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.4 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", system-ui, sans-serif;
+    padding: env(safe-area-inset-top) 0 calc(env(safe-area-inset-bottom) + 24px);
+  }
+  button, input { font: inherit; color: inherit; }
+  a { color: inherit; }
+
+  header { padding: 18px 16px 6px; max-width: 760px; margin: 0 auto; }
+  .top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  h1 {
+    margin: 0; font: 700 30px/1.05 "Iowan Old Style", "Palatino", Georgia, serif; letter-spacing: -0.01em;
+  }
+  h1 em { color: var(--accent); font-style: italic; }
+  .meta { color: var(--muted); font-size: 12px; text-align: right; }
+  .meta button { background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; font-size: 12px; }
+
+  .sticky {
+    position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    padding-top: env(safe-area-inset-top); margin-top: calc(-1 * env(safe-area-inset-top));
+    border-bottom: 1px solid var(--line);
+  }
+  .sticky-inner { max-width: 760px; margin: 0 auto; padding: 8px 0 10px; }
+  .scroller { display: flex; gap: 6px; overflow-x: auto; padding: 0 16px; scrollbar-width: none; }
+  .scroller::-webkit-scrollbar { display: none; }
+  .day {
+    flex: 0 0 auto; border: 1px solid var(--line); background: var(--surface); border-radius: 12px;
+    padding: 6px 12px; text-align: center; cursor: pointer; min-width: 58px;
+  }
+  .day small { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  .day b { font-size: 17px; }
+  .day[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .day[aria-pressed="true"] small { color: inherit; opacity: .7; }
+
+  .row2 { display: flex; gap: 8px; padding: 10px 16px 0; align-items: center; }
+  @media (max-width: 480px) { .row2 { flex-wrap: wrap; } .row2 .search { flex-basis: 100%; order: 2; } .row2 .seg { flex: 1; } .seg button { flex: 1; } }
+  .search {
+    flex: 1; min-width: 0; border: 1px solid var(--line); background: var(--surface); border-radius: 10px;
+    padding: 8px 12px;
+  }
+  .seg { display: flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; flex: 0 0 auto; }
+  .seg button { border: 0; background: var(--surface); padding: 8px 12px; cursor: pointer; font-size: 13px; }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+
+  .chips { padding-top: 10px; }
+  .chip {
+    flex: 0 0 auto; border: 1px solid var(--line); background: transparent; border-radius: 999px;
+    padding: 5px 11px 5px 9px; font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+    color: var(--muted);
+  }
+  .chip i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); opacity: .35; }
+  .chip[aria-pressed="true"] { color: var(--ink); background: var(--surface); }
+  .chip[aria-pressed="true"] i { opacity: 1; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 12px 16px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+    padding: 14px 14px 12px; margin-bottom: 10px;
+  }
+  .card h2 { margin: 0 0 8px; font: 600 18px/1.25 "Iowan Old Style", "Palatino", Georgia, serif; }
+  .card h2 .fmt { font: 500 11px/1 -apple-system, system-ui, sans-serif; }
+  .venue { display: grid; grid-template-columns: 112px 1fr; gap: 6px 10px; align-items: start; padding: 6px 0; border-top: 1px dashed var(--line); }
+  .venue:first-of-type { border-top: 0; }
+  .vname { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: baseline; padding-top: 4px; }
+  .vname i { flex: 0 0 8px; height: 8px; border-radius: 50%; background: var(--c); transform: translateY(-1px); }
+  .times { display: flex; flex-wrap: wrap; gap: 6px; }
+  .t {
+    text-decoration: none; background: var(--pill); color: var(--pill-ink); border-radius: 8px;
+    padding: 5px 9px; font-size: 14px; font-variant-numeric: tabular-nums; font-weight: 550; white-space: nowrap;
+  }
+  a.t:hover { outline: 2px solid var(--c, var(--accent)); }
+  .t.past { color: var(--past); background: transparent; text-decoration: line-through; font-weight: 400; }
+  .fmt {
+    display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; font-weight: 600;
+    color: var(--accent); margin-left: 4px; vertical-align: 1px;
+  }
+  .tsec { margin: 18px 0 8px; display: flex; align-items: baseline; gap: 8px; }
+  .tsec h3 { margin: 0; font: 700 20px/1.2 "Iowan Old Style", Georgia, serif; }
+  .tsec i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+  .tsec a { margin-left: auto; font-size: 12px; color: var(--muted); }
+  .film-row { display: grid; grid-template-columns: 1fr; gap: 6px; padding: 10px 0; border-top: 1px dashed var(--line); }
+  .film-row:first-child { border-top: 0; padding-top: 0; }
+  .film-row b { font-weight: 600; }
+
+  .empty, .err { color: var(--muted); text-align: center; padding: 40px 12px; }
+  .warn { font-size: 12px; color: var(--muted); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; margin-bottom: 10px; }
+  .skel { height: 92px; border-radius: var(--r); background: linear-gradient(90deg, var(--surface), var(--pill), var(--surface)); background-size: 200% 100%; animation: sh 1.2s infinite linear; margin-bottom: 10px; }
+  @keyframes sh { to { background-position: -200% 0; } }
+  /* ratings */
+  .rt { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: -2px 0 8px; font-size: 12px; color: var(--muted); }
+  .rt a { text-decoration: none; display: inline-flex; align-items: center; gap: 4px; border-radius: 6px; padding: 2px 7px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .rt .lb { background: var(--lb-bg); color: var(--lb); }
+  .rt .lb i { font-style: normal; letter-spacing: -1px; font-size: 10px; }
+  .rt .im { background: var(--im-bg); color: var(--im); }
+  .rt .im small { font-weight: 800; font-size: 9.5px; letter-spacing: .02em; }
+  .film-row .rt { margin: 0; }
+  /* weekly best */
+  .best-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 4px 0 10px; }
+  .best-head h2 { margin: 0; font: 700 22px/1.15 "Iowan Old Style", Georgia, serif; }
+  .best-head a { font-size: 12px; color: var(--accent); white-space: nowrap; }
+  .pick { display: grid; grid-template-columns: 34px 1fr; gap: 0 8px; }
+  .pick .rank { font: 700 26px/1 "Iowan Old Style", Georgia, serif; color: var(--accent); padding-top: 2px; }
+  .pick .rt { margin-top: 4px; }
+  .pick .vn { font-size: 13px; margin-top: 6px; }
+  .pick .vn b { font-weight: 600; }
+  .pick .vn .times { margin-top: 4px; }
+  .note-tag { display: inline-block; font-size: 11px; font-weight: 600; background: var(--pill); color: var(--muted); border-radius: 999px; padding: 3px 8px; margin: 8px 4px 0 0; }
+  /* events */
+  .t.ev { box-shadow: inset 0 0 0 1.5px var(--gold); }
+  .evtag {
+    display: inline-flex; align-items: center; gap: 4px; font: 600 11px/1 -apple-system, system-ui, sans-serif;
+    color: var(--gold-ink); background: var(--gold-bg); border-radius: 999px; padding: 4px 8px; margin: 0 4px 8px 0;
+    text-decoration: none; letter-spacing: .02em;
+  }
+  .heads {
+    background: var(--gold-bg); border: 1px solid var(--gold); border-radius: var(--r); padding: 10px 12px; margin-bottom: 12px;
+  }
+  .heads h4 { margin: 0 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--gold-ink); }
+  .heads ul { margin: 0; padding: 0; list-style: none; }
+  .heads li { font-size: 13.5px; padding: 3px 0; }
+  .heads li b { font-weight: 650; }
+  .heads button { background: none; border: 0; padding: 0; color: var(--gold-ink); font-size: 12px; cursor: pointer; text-decoration: underline; margin-top: 4px; }
+  .ev-card h2 { margin-bottom: 2px; }
+  .ev-when { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+  .ev-status { display: inline-block; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 3px 7px; border-radius: 6px; margin-right: 6px; vertical-align: 1px; }
+  .ev-status.now { background: var(--accent); color: #fff; }
+  .ev-status.soon { background: var(--gold-bg); color: var(--gold-ink); }
+  .ev-status.later { background: var(--pill); color: var(--muted); }
+  .ev-blurb { margin: 0 0 10px; font-size: 14px; }
+  .tix { list-style: none; margin: 0 0 8px; padding: 0; border-top: 1px dashed var(--line); }
+  .tix li { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; padding: 7px 0; border-bottom: 1px dashed var(--line); font-size: 13.5px; }
+  .tix li.done { color: var(--past); }
+  .tix .when { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+  .tix .note { grid-column: 1 / -1; font-size: 12px; color: var(--muted); }
+  .tix .cd { font-weight: 650; color: var(--gold-ink); }
+  .est { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 4px; margin-left: 4px; }
+  .ev-tips { font-size: 12.5px; color: var(--muted); margin: 0 0 8px; }
+  .ev-links { display: flex; gap: 14px; font-size: 13px; }
+  .ev-links a { color: var(--accent); }
+  .sub { color: var(--muted); font-size: 12px; margin: 4px 0 12px; }
+  @media (max-width: 420px) { .venue { grid-template-columns: 1fr; gap: 4px; } .vname { padding-top: 0; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <h1>Showtimes <em>NYC</em></h1>
+    <div class="meta"><span id="updated">Loading…</span><br><button id="refresh">Refresh</button></div>
+  </div>
+</header>
+<div class="sticky">
+  <div class="sticky-inner">
+    <div class="scroller" id="days"></div>
+    <div class="row2">
+      <input class="search" id="q" type="search" placeholder="Search films" autocomplete="off">
+      <div class="seg" role="group">
+        <button id="v-film" aria-pressed="true">Films</button>
+        <button id="v-theater" aria-pressed="false">Theaters</button>
+        <button id="v-best" aria-pressed="false">Best</button>
+        <button id="v-events" aria-pressed="false">Events</button>
+      </div>
+    </div>
+    <div class="scroller chips" id="chips"></div>
+  </div>
+</div>
+<main id="out"><div class="skel"></div><div class="skel"></div><div class="skel"></div></main>
+
+<script>
+const COLORS = {
+  filmforum: "#c2361f", metrograph: "#2f6f5e", ifc: "#d4882b", angelika: "#7a4fb3",
+  paris: "#b8386f", "nitehawk-prospect-park": "#2c6fb7", bam: "#5c7d2a", filmlinc: "#2a5d8f",
+};
+const SHORT = {
+  filmforum: "Film Forum", metrograph: "Metrograph", ifc: "IFC Center", angelika: "Angelika",
+  paris: "The Paris", "nitehawk-prospect-park": "Nitehawk PP", bam: "BAM", filmlinc: "Lincoln Center",
+};
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+};
+
+let data = null;
+const state = {
+  day: null,
+  view: store.get("view", "film"),
+  hidden: new Set(store.get("hidden", [])),
+  q: "",
+};
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const nyNow = () => {
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hourCycle: "h23",
+  }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+  return `${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}`;
+};
+const fmtTime = (iso) => {
+  let [h, m] = iso.slice(11, 16).split(":").map(Number);
+  const ap = h >= 12 ? "pm" : "am"; h = h % 12 || 12;
+  return `${h}:${String(m).padStart(2, "0")}${ap}`;
+};
+const normTitle = (t) => t.toLowerCase().replace(/&/g, "and").replace(/^the\s+|^a\s+/, "").replace(/[^a-z0-9]+/g, " ").trim();
+const SMALL = new Set(["a", "an", "and", "as", "at", "but", "by", "for", "in", "of", "on", "or", "the", "to", "vs", "with"]);
+// Some sites shout ("ASHES AND DIAMONDS"); title-case those, leave mixed-case titles alone.
+const niceTitle = (t) => {
+  if (/[a-z]/.test(t)) return t;
+  return t.toLowerCase().replace(/[\p{L}\d']+/gu, (w, i) =>
+    /^(i{1,3}|iv|vi{0,3}|ix|x|ch|oc|nyc|usa|uk)$/.test(w) ? w.toUpperCase()
+      : i > 0 && SMALL.has(w) && !/[:\-–]\s*$/.test(t.slice(0, i)) ? w
+      : w[0].toUpperCase() + w.slice(1));
+};
+// Projection formats every modern show has aren't worth a badge.
+const HIDE_FMT = /^(dcp|digital|2d)$/i;
+const fmtLabel = (f) => (f || "").split(/,\s*/).filter((x) => x && !HIDE_FMT.test(x)).join(" · ");
+
+// ---- events (events.json, served alongside showtimes) ----
+const allEvents = () => (data && data.events && data.events.events) || [];
+const todayKey = () => nyNow().slice(0, 10);
+const dayDiff = (a, b) => Math.round((Date.parse(a) - Date.parse(b)) / 864e5);
+const fmtDate = (k, opts = {}) => new Date(k + "T12:00:00Z").toLocaleDateString("en-US",
+  { weekday: "short", month: "short", day: "numeric", timeZone: "UTC", ...opts });
+const fmtRange = (a, b) => a === b ? fmtDate(a)
+  : fmtDate(a, { weekday: undefined }) + " – " + fmtDate(b, { weekday: undefined, month: a.slice(5, 7) === b.slice(5, 7) ? undefined : "short" });
+const relDays = (n) => n === 0 ? "today" : n === 1 ? "tomorrow" : n < 0 ? `${-n} days ago`
+  : n < 14 ? `in ${n} days` : n < 60 ? `in ${Math.round(n / 7)} weeks` : `in ${Math.round(n / 30)} months`;
+
+// A screening belongs to an event when it falls in the event's dates and either its title/series
+// names the event, its ticket link points at the festival, or it's a listed film at one of its theaters.
+function eventFor(s) {
+  const d = s.start.slice(0, 10);
+  const hay = (s.title + " | " + (s.series || "")).toLowerCase();
+  const nt = normTitle(s.title), url = (s.url || "").toLowerCase();
+  for (const e of allEvents()) {
+    if (!e.start || d < e.start || d > (e.end || e.start)) continue;
+    const m = e.match || {};
+    const keys = [...(m.keywords || []), ...(m.series || [])].map((k) => k.toLowerCase()).filter(Boolean);
+    if (keys.some((k) => hay.includes(k))) return e;
+    if ((m.urls || []).some((u) => url.includes(u.toLowerCase()))) return e;
+    if ((!e.theaters || !e.theaters.length || e.theaters.includes(s.theater.id)) &&
+        (m.titles || []).some((t) => nt.startsWith(normTitle(t)))) return e;
+  }
+  return null;
+}
+
+// Upcoming ticket on-sale moments, soonest first.
+function milestones(withinDays) {
+  const t = todayKey(), out = [];
+  for (const e of allEvents()) for (const k of e.tickets || []) {
+    if (!k.date) continue;
+    const n = dayDiff(k.date, t);
+    if (n >= 0 && n <= withinDays) out.push({ e, k, n });
+  }
+  return out.sort((a, b) => a.k.date.localeCompare(b.k.date) || (a.k.time || "").localeCompare(b.k.time || ""));
+}
+
+function eventStatus(e) {
+  const t = todayKey();
+  if (e.start <= t && t <= (e.end || e.start)) return { cls: "now", text: "Happening now" };
+  const n = dayDiff(e.start, t);
+  return { cls: n <= 30 ? "soon" : "later", text: "Starts " + relDays(n) };
+}
+
+function headsUp() {
+  const t = todayKey();
+  const now = allEvents().filter((e) => e.start <= t && t <= (e.end || e.start));
+  const ms = milestones(21);
+  if (!now.length && !ms.length) return "";
+  const items = [
+    ...now.map((e) => `<li>🎬 <b>${esc(e.name)}</b> is on now, through ${fmtDate(e.end, { weekday: undefined })}</li>`),
+    ...ms.slice(0, 4).map(({ e, k, n }) =>
+      `<li>🎟 <b>${esc(e.name)}</b>: ${esc(k.label)} ${relDays(n)}${k.time ? " at " + fmtTime("0000-00-00T" + k.time.padStart(5, "0")) : ""}${k.confirmed === false ? ' <span class="est">est.</span>' : ""}</li>`),
+  ];
+  return `<div class="heads"><h4>Heads up</h4><ul>${items.join("")}</ul><button data-go="events">All events &amp; ticket dates →</button></div>`;
+}
+
+function renderEvents() {
+  const t = todayKey();
+  const list = allEvents().filter((e) => (e.end || e.start) >= t)
+    .sort((a, b) => a.start.localeCompare(b.start));
+  if (!list.length) return `<div class="empty">No upcoming events yet. Add some to <code>events.json</code>.</div>`;
+  const verified = data.events.verified ? `Calendar checked ${fmtDate(data.events.verified)}. ` : "";
+  return `<p class="sub">${verified}Dates marked <span class="est">est.</span> are estimated from past years. Confirm on the official site.</p>` +
+    list.map((e) => {
+      const st = eventStatus(e);
+      const tix = (e.tickets || []).map((k) => {
+        const n = k.date ? dayDiff(k.date, t) : null;
+        const done = n !== null && n < 0 && !k.on_sale;
+        return `<li class="${done ? "done" : ""}">
+          <span>${esc(k.label)}${k.confirmed === false ? '<span class="est">est.</span>' : ""}</span>
+          <span class="when">${k.on_sale ? '<span class="cd">On sale now</span>' : k.date ? fmtDate(k.date) : "TBA"}${k.time ? " · " + esc(k.time) : ""}${n !== null && !done ? ` <span class="cd">${relDays(n)}</span>` : ""}</span>
+          ${k.note ? `<span class="note">${esc(k.note)}</span>` : ""}
+        </li>`;
+      }).join("");
+      return `<article class="card ev-card">
+        <h2>${esc(e.name)}</h2>
+        <div class="ev-when"><span class="ev-status ${st.cls}">${st.text}</span>${fmtRange(e.start, e.end || e.start)}${e.dates_confirmed === false ? '<span class="est">est.</span>' : ""}${e.venues ? " · " + esc(e.venues) : ""}</div>
+        ${e.blurb ? `<p class="ev-blurb">${esc(e.blurb)}</p>` : ""}
+        ${tix ? `<ul class="tix">${tix}</ul>` : ""}
+        ${e.tips ? `<p class="ev-tips">💡 ${esc(e.tips)}</p>` : ""}
+        <div class="ev-links">${e.url ? `<a href="${esc(e.url)}" target="_blank" rel="noopener">Official site ↗</a>` : ""}</div>
+      </article>`;
+    }).join("");
+}
+
+// ---- weekly best (ranked server-side by digest.py, same list as the /digest page) ----
+let digest = null;
+async function renderBest() {
+  if (!digest) {
+    $("out").innerHTML = `<div class="skel"></div><div class="skel"></div>`;
+    try { digest = await getJSON("api/digest", "data/digest.json"); }
+    catch { $("out").innerHTML = `<div class="err">Couldn't load this week's picks.</div>`; return; }
+    if (state.view !== "best") return;
+  }
+  const now = nyNow();
+  const range = fmtRange(digest.start, digest.end);
+  const head = `<div class="best-head"><h2>This week's best</h2><a href="digest.html" target="_blank" rel="noopener">Digest page ↗</a></div>
+    <p class="sub">${range} · top ${digest.picks.length} of ${digest.rated_films} rated films, by Letterboxd + IMDb, weighted by number of ratings.</p>`;
+  if (!digest.picks.length) { $("out").innerHTML = head + `<div class="empty">Ratings are still loading. Check back in a minute.</div>`; return; }
+  $("out").innerHTML = head + digest.picks.map((p, i) => {
+    const r = { lb: p.lb, lb_count: p.lb_count, lb_url: p.lb_url, imdb: p.imdb, imdb_votes: p.imdb_votes, imdb_url: p.imdb_url, year: p.year };
+    const venues = p.theaters.map((th) => {
+      const shows = th.shows.map((s) => ({ ...s, title: p.title, theater: th }));
+      const byDay = shows.slice(0, 4).map((s) => {
+        const d = s.start.slice(0, 10) === now.slice(0, 10) ? "" : fmtDate(s.start.slice(0, 10), { month: undefined, day: undefined }) + " ";
+        const label = d + fmtTime(s.start);
+        return s.url ? `<a class="t" style="--c:${COLORS[th.id]}" href="${esc(s.url)}" target="_blank" rel="noopener">${label}</a>` : `<span class="t">${label}</span>`;
+      }).join("");
+      const more = shows.length > 4 ? `<span class="t past" style="text-decoration:none">+${shows.length - 4} more</span>` : "";
+      return `<div class="vn" style="--c:${COLORS[th.id]}"><div class="vname" style="padding:0"><i></i><b>${esc(SHORT[th.id] || th.name)}</b></div><div class="times">${byDay}${more}</div></div>`;
+    }).join("");
+    const notes = p.notes.map((n) => `<span class="note-tag">${esc(n)}</span>`).join("") +
+      p.events.map((e) => `<a class="evtag" href="${esc(e.url || "#")}" target="_blank" rel="noopener">★ ${esc(e.name)}</a>`).join("");
+    return `<article class="card pick"><div class="rank">${i + 1}</div><div>
+      <h2 style="margin:0">${esc(niceTitle(p.title))}</h2>${chipsFrom(r)}${venues}${notes ? `<div>${notes}</div>` : ""}</div></article>`;
+  }).join("");
+}
+
+// Behind server.py the live api/ endpoints answer; on a static host (GitHub Pages) they don't exist,
+// so fall back to the JSON files build.py publishes.
+async function getJSON(live, saved) {
+  try {
+    const r = await fetch(live, { cache: "no-store" });
+    if (r.ok && (r.headers.get("content-type") || "").includes("json")) return await r.json();
+  } catch {}
+  const r = await fetch(saved, { cache: "no-store" });
+  if (!r.ok) throw new Error(saved + " " + r.status);
+  return await r.json();
+}
+
+async function load(refresh) {
+  $("updated").textContent = refresh ? "Refreshing…" : "Loading…";
+  try {
+    data = await getJSON("api/showtimes" + (refresh ? "?refresh=1" : ""), "data/showtimes.json");
+    digest = null;  // re-rank against the fresh showtimes
+    const u = new Date(data.fetched_at * 1000);
+    $("updated").textContent = "Updated " + u.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+    render();
+  } catch (e) {
+    $("updated").textContent = "Offline";
+    $("out").innerHTML = `<div class="err">Couldn't reach the showtimes server.<br>Check your connection and try again.</div>`;
+  }
+}
+
+function days() {
+  const out = [];
+  const [y, m, d] = nyNow().slice(0, 10).split("-").map(Number);
+  for (let i = 0; i < 7; i++) {
+    const dt = new Date(Date.UTC(y, m - 1, d + i));
+    out.push({
+      key: dt.toISOString().slice(0, 10),
+      dow: i === 0 ? "Today" : dt.toLocaleDateString("en-US", { weekday: "short", timeZone: "UTC" }),
+      num: dt.getUTCDate(),
+    });
+  }
+  return out;
+}
+
+function renderControls() {
+  const ds = days();
+  if (!state.day || !ds.some((d) => d.key === state.day)) state.day = ds[0].key;
+  $("days").innerHTML = ds.map((d) =>
+    `<button class="day" data-day="${d.key}" aria-pressed="${d.key === state.day}"><small>${d.dow}</small><b>${d.num}</b></button>`
+  ).join("");
+  $("chips").innerHTML = data.theaters.map((t) =>
+    `<button class="chip" data-t="${t.id}" style="--c:${COLORS[t.id] || "#888"}" aria-pressed="${!state.hidden.has(t.id)}"><i></i>${esc(SHORT[t.id] || t.name)}</button>`
+  ).join("");
+  $("v-film").setAttribute("aria-pressed", state.view === "film");
+  $("v-theater").setAttribute("aria-pressed", state.view === "theater");
+  $("v-events").setAttribute("aria-pressed", state.view === "events");
+  $("v-best").setAttribute("aria-pressed", state.view === "best");
+  const ev = state.view === "events" || state.view === "best";
+  $("days").hidden = ev; $("q").hidden = ev; $("chips").hidden = ev;
+}
+
+function visibleShows() {
+  const q = state.q.trim().toLowerCase();
+  const rows = [];
+  for (const t of data.theaters) {
+    if (state.hidden.has(t.id)) continue;
+    for (const s of t.shows) {
+      if (!s.start.startsWith(state.day)) continue;
+      if (q && !s.title.toLowerCase().includes(q)) continue;
+      const row = { ...s, raw: s.title, title: niceTitle(s.title), theater: t };
+      row.ev = eventFor(row);
+      rows.push(row);
+    }
+  }
+  return rows.sort((a, b) => a.start.localeCompare(b.start));
+}
+
+function pill(s, now) {
+  const past = s.start < now;
+  const c = COLORS[s.theater.id];
+  const f = fmtLabel(s.format);
+  const label = fmtTime(s.start) + (f ? `<span class="fmt">${esc(f)}</span>` : "");
+  if (past) return `<span class="t past">${label}</span>`;
+  const cls = "t" + (s.ev ? " ev" : "");
+  const tip = s.ev ? ` title="${esc(s.ev.name)}"` : "";
+  return s.url
+    ? `<a class="${cls}" style="--c:${c}"${tip} href="${esc(s.url)}" target="_blank" rel="noopener">${label}</a>`
+    : `<span class="${cls}"${tip}>${label}</span>`;
+}
+
+// Letterboxd (x/5) and IMDb (x/10) ratings, looked up server-side by the listing's title.
+function ratingFor(ss) {
+  const R = (data && data.ratings) || {};
+  for (const s of ss) if (R[s.raw]) return R[s.raw];
+  return null;
+}
+const kfmt = (n) => n >= 1e6 ? (n / 1e6).toFixed(1) + "M" : n >= 1e3 ? Math.round(n / 1e3) + "k" : String(n);
+function ratingChips(ss) { return chipsFrom(ratingFor(ss)); }
+function chipsFrom(r) {
+  if (!r || (r.lb == null && r.imdb == null)) return "";
+  const lb = r.lb != null
+    ? `<a class="lb" href="${esc(r.lb_url)}" target="_blank" rel="noopener" title="Letterboxd${r.lb_count ? ", " + kfmt(r.lb_count) + " ratings" : ""}"><i><b style="color:#ff8000">●</b><b style="color:#00c04b">●</b><b style="color:#40bcf4">●</b></i>${r.lb.toFixed(1)}</a>` : "";
+  const im = r.imdb != null
+    ? `<a class="im" href="${esc(r.imdb_url)}" target="_blank" rel="noopener" title="IMDb${r.imdb_votes ? ", " + kfmt(r.imdb_votes) + " votes" : ""}"><small>IMDb</small>${r.imdb.toFixed(1)}</a>` : "";
+  return `<div class="rt">${lb}${im}${r.year ? `<span>${r.year}</span>` : ""}</div>`;
+}
+
+function tags(ss) {
+  const evs = new Map(), series = new Set();
+  for (const s of ss) {
+    if (s.ev) evs.set(s.ev.id, s.ev);
+    else if (s.series) series.add(s.series);
+  }
+  return [...evs.values()].map((e) =>
+      `<a class="evtag" href="${esc(e.url || "#")}" target="_blank" rel="noopener">★ ${esc(e.name)}</a>`).join("") +
+    [...series].map((n) => `<span class="evtag" style="background:var(--pill);color:var(--muted)">${esc(n)}</span>`).join("");
+}
+
+function renderByFilm(rows, now) {
+  const films = new Map();
+  for (const s of rows) {
+    const k = normTitle(s.title);
+    if (!films.has(k)) films.set(k, { title: s.title, byT: new Map(), next: null, all: [] });
+    const f = films.get(k);
+    f.all.push(s);
+    if (!f.byT.has(s.theater.id)) f.byT.set(s.theater.id, []);
+    f.byT.get(s.theater.id).push(s);
+    if (s.start >= now && (!f.next || s.start < f.next)) f.next = s.start;
+  }
+  // Event screenings float to the top, then by next showtime.
+  const isEv = (f) => f.next && f.all.some((s) => s.ev && s.start >= now) ? 0 : 1;
+  const list = [...films.values()].sort((a, b) =>
+    isEv(a) - isEv(b) || (a.next ? 0 : 1) - (b.next ? 0 : 1) || (a.next || "").localeCompare(b.next || "") || a.title.localeCompare(b.title));
+  return list.map((f) => `
+    <article class="card">
+      <h2>${esc(f.title)}</h2>
+      ${ratingChips(f.all)}
+      ${tags(f.all)}
+      ${[...f.byT.entries()].map(([tid, ss]) => `
+        <div class="venue" style="--c:${COLORS[tid]}">
+          <div class="vname"><i></i>${esc(SHORT[tid] || ss[0].theater.name)}</div>
+          <div class="times">${ss.map((s) => pill(s, now)).join("")}</div>
+        </div>`).join("")}
+    </article>`).join("");
+}
+
+function renderByTheater(rows, now) {
+  return data.theaters.filter((t) => !state.hidden.has(t.id)).map((t) => {
+    const mine = rows.filter((s) => s.theater.id === t.id);
+    const films = new Map();
+    for (const s of mine) {
+      if (!films.has(s.title)) films.set(s.title, []);
+      films.get(s.title).push(s);
+    }
+    const body = films.size
+      ? [...films.entries()].map(([title, ss]) =>
+          `<div class="film-row"><b>${esc(title)}</b>${ratingChips(ss)}${tags(ss) ? `<div>${tags(ss)}</div>` : ""}<div class="times">${ss.map((s) => pill(s, now)).join("")}</div></div>`).join("")
+      : `<div class="vname" style="padding:0">${t.error && !t.shows.length ? "Couldn't load this theater." : "Nothing scheduled."}</div>`;
+    return `
+      <div class="tsec" style="--c:${COLORS[t.id]}"><i></i><h3>${esc(t.name)}</h3>
+        ${t.url ? `<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.neighborhood || "Website")} ↗</a>` : ""}</div>
+      <section class="card">${body}</section>`;
+  }).join("");
+}
+
+function render() {
+  if (!data) return;
+  renderControls();
+  const now = nyNow();
+  const rows = visibleShows();
+  const broken = data.theaters.filter((t) => t.error && !state.hidden.has(t.id));
+  let html = broken.length
+    ? `<div class="warn">Couldn't refresh: ${broken.map((t) => esc(SHORT[t.id] || t.name) + (t.stale ? " (showing earlier data)" : "")).join(", ")}</div>`
+    : "";
+  if (state.view === "events") { $("out").innerHTML = renderEvents(); return; }
+  if (state.view === "best") { renderBest(); return; }
+  html += headsUp();
+  if (state.view === "theater") html += renderByTheater(rows, now);
+  else html += rows.length ? renderByFilm(rows, now) : `<div class="empty">No showtimes match.</div>`;
+  $("out").innerHTML = html;
+}
+
+$("days").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-day]"); if (!b) return;
+  state.day = b.dataset.day; render(); window.scrollTo({ top: 0 });
+});
+$("chips").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-t]"); if (!b) return;
+  const id = b.dataset.t;
+  state.hidden.has(id) ? state.hidden.delete(id) : state.hidden.add(id);
+  store.set("hidden", [...state.hidden]); render();
+});
+$("v-film").onclick = () => { state.view = "film"; store.set("view", "film"); render(); };
+$("v-theater").onclick = () => { state.view = "theater"; store.set("view", "theater"); render(); };
+const showEvents = () => { state.view = "events"; store.set("view", "events"); render(); window.scrollTo({ top: 0 }); };
+$("v-events").onclick = showEvents;
+$("v-best").onclick = () => { state.view = "best"; store.set("view", "best"); render(); window.scrollTo({ top: 0 }); };
+$("out").addEventListener("click", (e) => { if (e.target.closest('[data-go="events"]')) showEvents(); });
+$("q").addEventListener("input", (e) => { state.q = e.target.value; render(); });
+$("refresh").onclick = () => load(true);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) render(); });
+
+load(false);
+</script>
+</body>
+</html>
