@@ -212,7 +212,7 @@ def public(cache, titles=None):
             continue
         if not e.get("imdb_id"):
             continue
-        out[t] = {"year": e.get("year"), "imdb": e.get("imdb"), "imdb_votes": e.get("imdb_votes"),
+        out[t] = {"imdb_id": e["imdb_id"], "year": e.get("year"), "imdb": e.get("imdb"), "imdb_votes": e.get("imdb_votes"),
                   "imdb_url": "https://www.imdb.com/title/%s/" % e["imdb_id"],
                   "lb": e.get("lb"), "lb_count": e.get("lb_count"), "lb_url": e.get("lb_url")}
     return out

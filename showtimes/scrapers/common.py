@@ -10,6 +10,9 @@ Each showtime dict:
     start   str   local New York time, ISO "YYYY-MM-DDTHH:MM" (no timezone)
     url     str   ticket link if available, else film page, else None
     format  str   optional, e.g. "35mm", "70mm", "Q&A" (None if unknown)
+    film_url str  the film's page on the theater's own site (where the
+                  description lives), separate from the ticket url; None if
+                  it can't be determined
 """
 import datetime as dt
 import gzip
@@ -80,5 +83,6 @@ def iso(date, hour, minute):
     return "%s-%02d-%02dT%02d:%02d" % (date.year, date.month, date.day, hour, minute)
 
 
-def show(title, start, url=None, format=None):
-    return {"title": clean(title), "start": start, "url": url, "format": format or None}
+def show(title, start, url=None, format=None, film_url=None):
+    return {"title": clean(title), "start": start, "url": url, "format": format or None,
+            "film_url": film_url or None}

@@ -8,6 +8,11 @@ Enrichment: filmforum.org/events lists special screenings (Q&As, intros, live
 music); those are matched to API performances by ticket performance id, or by
 date + 12-hour clock time.
 
+Film pages: the API only links to my.filmforum.org purchase pages, so each
+performance's filmforum.org/film/<slug> page (film_url) is taken from the
+/now_playing weekly tabs, matched by date + 12-hour clock time (title overlap
+breaks ties), then by production, then by normalised title.
+
 Fallback: if the API fails, parse the weekly tabs on filmforum.org/now_playing
 (times there have no AM/PM, so a heuristic is used).
 """
@@ -100,14 +105,53 @@ def _special_events():
     return by_id, by_slot
 
 
+def _words(s):
+    return set(re.findall(r"[a-z0-9]+", clean(s).lower().replace("&", " and ")))
+
+
+def _film_pages():
+    """Return (by_date_12h, by_title) maps of filmforum.org film page URLs
+    from the /now_playing weekly tabs (tab-0 is today)."""
+    by_slot = {}  # type: Dict[Tuple[dt.date, int, int], List[Tuple[str, str]]]
+    by_title = {}  # type: Dict[str, str]
+    try:
+        page = get(NOW_PLAYING)
+    except Exception:
+        return by_slot, by_title
+    base = today()
+    for idx, body in re.findall(r'<div id="tabs-(\d+)">(.*?)</div>', page, re.S):
+        day = base + dt.timedelta(days=int(idx))
+        for p in re.findall(r"<p>(.*?)</p>", body, re.S):
+            m = re.search(r'<strong><a href="(https?://filmforum\.org/film/[^"#]+)">(.*?)</a></strong>',
+                          p, re.S)
+            if not m:
+                continue
+            url, title = m.group(1), clean(m.group(2))
+            by_title.setdefault(" ".join(sorted(_words(title))), url)
+            for t in re.findall(r"<span>\s*(\d{1,2}):(\d{2})\s*</span>", p):
+                by_slot.setdefault((day, int(t[0]) % 12, int(t[1])), []).append((title, url))
+    return by_slot, by_title
+
+
+def _pick(cands, title):
+    """Choose the candidate film whose title shares the most words."""
+    if len(cands) == 1:
+        return cands[0][1]
+    words = _words(title)
+    best = max(cands, key=lambda c: len(words & _words(c[0])))
+    return best[1] if words & _words(best[0]) else None
+
+
 def _from_api(start, end):
     # type: (dt.date, dt.date) -> List[dict]
     body = {"startDate": start.strftime("%Y-%m-%dT00:00"),
             "endDate": end.strftime("%Y-%m-%dT00:00")}
     data = get_json(API, data=body, headers={"Accept": "application/json"})
     by_id, by_slot = _special_events()
+    pages, by_title = _film_pages()
     out = []
     for prod in data.get("productions") or []:
+        rows = []
         for perf in prod.get("performances") or []:
             try:
                 if perf.get("isPerformanceVisible") is False:
@@ -127,10 +171,20 @@ def _from_api(start, end):
                 special = by_id.get(str(perf.get("id"))) or by_slot.get(
                     (when.date(), when.hour % 12, when.minute))
                 url = perf.get("actionUrl") or prod.get("actionUrl")
-                out.append(show(title, iso(when.date(), when.hour, when.minute),
-                                url, _join(fmt, special)))
+                cands = pages.get((when.date(), when.hour % 12, when.minute)) or []
+                rows.append((show(title, iso(when.date(), when.hour, when.minute),
+                                  url, _join(fmt, special)), _pick(cands, title) if cands else None))
             except Exception:
                 continue
+        # Performances not in the weekly tabs fall back to the production's
+        # most common matched page, then to an exact (normalised) title match.
+        found = [f for _s, f in rows if f]
+        common = max(set(found), key=found.count) if found else None
+        for s, film_url in rows:
+            s["film_url"] = (film_url or common
+                             or by_title.get(" ".join(sorted(_words(s["title"]))))
+                             or by_title.get(" ".join(sorted(_words(prod.get("productionTitle"))))))
+            out.append(s)
     return out
 
 
@@ -150,7 +204,7 @@ def _from_now_playing():
                     h, mi = parse_time(t)
                     if h < 10:  # 1:00-9:59 are afternoon/evening; 10-11 morning; 12 noon
                         h += 12
-                    out.append(show(m.group(2), iso(day, h, mi), m.group(1)))
+                    out.append(show(m.group(2), iso(day, h, mi), m.group(1), film_url=m.group(1)))
             except Exception:
                 continue
     return out

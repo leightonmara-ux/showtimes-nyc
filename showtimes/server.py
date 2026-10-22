@@ -16,6 +16,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 import digest
+import lists
 import ratings
 from scrapers.common import now
 
@@ -115,7 +116,7 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_GET(self):
         if self.path.startswith("/api/digest") or self.path.startswith("/digest"):
-            dg = digest.build(get_data(), _ratings, load_events().get("events", []))
+            dg = digest.build(get_data(), _ratings, load_events().get("events", []), lists.index())
             if self.path.startswith("/api/"):
                 self.send(json.dumps(dg).encode(), "application/json")
             else:
@@ -123,6 +124,7 @@ class Handler(SimpleHTTPRequestHandler):
         elif self.path.startswith("/api/showtimes"):
             data = dict(get_data(force="refresh=1" in self.path))
             data["ratings"] = _ratings
+            data["lists"] = lists.index()
             data["events"] = load_events()
             self.send(json.dumps(data).encode(), "application/json")
         else:

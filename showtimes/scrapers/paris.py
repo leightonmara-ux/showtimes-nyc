@@ -88,16 +88,16 @@ def fetch(days: int = 7) -> List[dict]:
             film = films[0] if films else {}
             name = clean(a.get("EventName"))
             title = clean(film.get("FilmName")) or name.split("|")[0].strip().title()
-            url = a.get("TicketLink") or (
-                "%s/film/%s" % (SITE, film["Slug"]) if film.get("Slug") else
-                "%s/event/%s" % (SITE, a["Slug"]) if a.get("Slug") else None)
+            film_url = ("%s/film/%s" % (SITE, film["Slug"]) if film.get("Slug") else
+                        "%s/event/%s" % (SITE, a["Slug"]) if a.get("Slug") else None)
+            url = a.get("TicketLink") or film_url
             fmt = _labels(name + " " + clean(a.get("HeroDetails")), film.get("FilmFormat"))
             start = iso(d, h, mi)
             key = (title.lower(), start)
             if key in seen:
                 continue
             seen.add(key)
-            out.append(show(title, start, url, fmt))
+            out.append(show(title, start, url, fmt, film_url=film_url))
         except Exception:
             continue
     out.sort(key=lambda s: (s["start"], s["title"]))

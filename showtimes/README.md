@@ -43,6 +43,16 @@ so both are out of 10) and IMDb. How many people rated a film doesn't affect its
 fewer than 100 ratings in total are left out, since their scores are only a handful of opinions. The same ranking is at http://localhost:8000/digest as an email-friendly page, and
 `python3 digest.py` prints it as text (`--html` writes `digest.html`).
 
+## Film pages and best-of lists
+
+Each theater's name on a film (or the film's title, in the Theaters view) links to that film's page
+on the theater's own website, for the description; the times stay ticket links.
+
+Films on the NYT's 100 Best Movies of the 21st Century, Rotten Tomatoes' 300 Best Movies of All Time,
+or the IMDb Top 250 get a badge with their rank (`lists.py`, data in `lists.json`, matched by IMDb id).
+The lists are a snapshot from Oct 2026: the NYT and RT lists rarely change, but IMDb's chart shifts
+daily, so its ranks drift until `lists.json` is refreshed.
+
 ## Hosting it online (GitHub Pages)
 
 `python3 build.py` scrapes everything and writes a static copy of the app into `static/`

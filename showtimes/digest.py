@@ -13,6 +13,7 @@ import json
 import re
 from pathlib import Path
 
+import lists as best_lists
 import ratings
 from scrapers.common import now
 
@@ -54,7 +55,8 @@ def event_for(show, theater_id, events):
     return None
 
 
-def build(data, rating_map, events, start=None, days=7, top=TOP_N):
+def build(data, rating_map, events, list_index=None, start=None, days=7, top=TOP_N):
+    list_index = list_index or {}
     start = start or now().date()
     end = start + dt.timedelta(days=days - 1)
     cutoff = now().isoformat(timespec="minutes")
@@ -70,7 +72,9 @@ def build(data, rating_map, events, start=None, days=7, top=TOP_N):
             key = r["imdb_url"]
             f = films.setdefault(key, {"titles": [], "rating": r, "theaters": {}, "events": {}, "formats": set()})
             f["titles"].append(s["title"])
-            f["theaters"].setdefault(t["id"], {"id": t["id"], "name": t["name"], "shows": []})["shows"].append(
+            th = f["theaters"].setdefault(t["id"], {"id": t["id"], "name": t["name"], "film_url": None, "shows": []})
+            th["film_url"] = th["film_url"] or s.get("film_url")
+            th["shows"].append(
                 {"start": s["start"], "url": s.get("url"), "format": s.get("format")})
             for part in re.split(r",\s*", s.get("format") or ""):
                 if part.lower() in FILM_PRINT or part in ("Q&A", "Intro"):
@@ -104,6 +108,7 @@ def build(data, rating_map, events, start=None, days=7, top=TOP_N):
             "imdb": r.get("imdb"), "imdb_votes": r.get("imdb_votes"), "imdb_url": r.get("imdb_url"),
             "theaters": theaters, "n_shows": len(shows), "next": min(s["start"] for s in shows), "last": last,
             "notes": notes, "events": list(f["events"].values()),
+            "lists": list_index.get(r.get("imdb_id"), []),
         })
     picks.sort(key=lambda p: -p["score"])
     return {"start": start.isoformat(), "end": end.isoformat(), "generated": now().isoformat(timespec="minutes"),
@@ -143,7 +148,7 @@ def render_text(dg):
         for th in p["theaters"]:
             lines.append("     %s: %s" % (th["name"], ", ".join(_when(s["start"]) for s in th["shows"][:6])
                                          + (" +%d more" % (len(th["shows"]) - 6) if len(th["shows"]) > 6 else "")))
-        extra = p["notes"] + ["★ " + e["name"] for e in p["events"]]
+        extra = p["notes"] + ["%s #%s" % (l["short"], l["rank"]) for l in p.get("lists", [])] + ["★ " + e["name"] for e in p["events"]]
         if extra:
             lines.append("     " + " · ".join(extra))
     return "\n".join(lines)
@@ -166,7 +171,7 @@ def render_html(dg):
             "%s · " % p["year"] if p["year"] else "", _k(votes)) if votes else "")
         th_rows = "".join(
             '<div style="margin-top:6px"><b style="font-weight:600">%s</b> <span style="color:#776d63">%s</span></div>' % (
-                e(th["name"]),
+                ('<a href="%s" style="color:#1d1916">%s</a>' % (e(th["film_url"]), e(th["name"])) if th.get("film_url") else e(th["name"])),
                 " · ".join('<a href="%s" style="color:#c2361f">%s</a>' % (e(s["url"] or "#"), _when(s["start"]))
                            for s in th["shows"][:8]) + (" +%d more" % (len(th["shows"]) - 8) if len(th["shows"]) > 8 else ""))
             for th in p["theaters"])
@@ -175,6 +180,9 @@ def render_html(dg):
                         if n == "New" else
                         '<span style="display:inline-block;background:#f0e8dd;border-radius:999px;padding:2px 8px;'
                         'margin:6px 4px 0 0;font-size:12px">%s</span>' % e(n)) for n in p["notes"])
+        tags += "".join('<a href="%s" style="display:inline-block;background:#1d1916;color:#f6efe4;border-radius:999px;padding:2px 8px;'
+                        'margin:6px 4px 0 0;font-size:12px;font-weight:600;text-decoration:none">%s #%s</a>' % (e(l["url"] or "#"), e(l["short"]), l["rank"])
+                        for l in p.get("lists", []))
         tags += "".join('<span style="display:inline-block;background:#fbefcf;color:#7a5600;border-radius:999px;'
                         'padding:2px 8px;margin:6px 4px 0 0;font-size:12px;font-weight:600">★ %s</span>' % e(ev["name"])
                         for ev in p["events"])
@@ -203,7 +211,7 @@ def from_files():
         events = json.loads((ROOT / "events.json").read_text())["events"]
     except (OSError, ValueError, KeyError):
         events = []
-    return build(data, ratings.public(ratings.load()), events)
+    return build(data, ratings.public(ratings.load()), events, best_lists.index())
 
 
 if __name__ == "__main__":

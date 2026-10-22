@@ -123,7 +123,8 @@ def fetch(days=7):
                                         SITE, ALIAS, s["id"], s["ScheduledFilmId"])
                                 key = (title.lower(), start)
                                 if key not in seen:
-                                    seen[key] = show(title, start, url=url, format=fmt)
+                                    seen[key] = show(title, start, url=url, format=fmt,
+                                                     film_url=film_url)
                             except Exception:
                                 continue
             except Exception:

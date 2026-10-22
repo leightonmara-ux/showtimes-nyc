@@ -218,7 +218,8 @@ def fetch(days=7):
                 if when is None or when == hhmm:
                     tags.append(label)
             seen[key] = show(title, start, url=turl or furl,
-                             format=", ".join(dict.fromkeys(tags)) or None)
+                             format=", ".join(dict.fromkeys(tags)) or None,
+                             film_url=furl)
         except Exception:
             continue
     return sorted(seen.values(), key=lambda s: (s["start"], s["title"]))

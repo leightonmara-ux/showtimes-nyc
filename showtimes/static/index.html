@@ -46,7 +46,7 @@
     margin: 0; font: 700 30px/1.05 "Iowan Old Style", "Palatino", Georgia, serif; letter-spacing: -0.01em;
   }
   h1 em { color: var(--accent); font-style: italic; }
-  .meta { color: var(--muted); font-size: 12px; text-align: right; }
+  .meta { color: var(--muted); font-size: 12px; text-align: right; flex: none; white-space: nowrap; }
   .meta button { background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; font-size: 12px; }
 
   .sticky {
@@ -130,6 +130,9 @@
   .rt .im { background: var(--im-bg); color: var(--im); }
   .rt .im small { font-weight: 800; font-size: 9.5px; letter-spacing: .02em; }
   .film-row .rt { margin: 0; }
+  .rt .lst { background: var(--ink); color: var(--bg); text-decoration: none; border-radius: 6px; padding: 2px 7px; font-size: 11px; font-weight: 650; white-space: nowrap; }
+  a.fl { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--muted); }
+  a.fl:hover { color: var(--accent); }
   .rt .new { background: var(--accent); color: #fff; border-radius: 6px; padding: 2px 7px; font-size: 10.5px; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
   /* weekly best */
   .best-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 4px 0 10px; }
@@ -356,7 +359,7 @@ async function renderBest() {
     <p class="sub">${range} · top ${digest.picks.length} of ${digest.rated_films} rated films, by average Letterboxd + IMDb rating.</p>`;
   if (!digest.picks.length) { $("out").innerHTML = head + `<div class="empty">Ratings are still loading. Check back in a minute.</div>`; return; }
   $("out").innerHTML = head + digest.picks.map((p, i) => {
-    const r = { lb: p.lb, lb_count: p.lb_count, lb_url: p.lb_url, imdb: p.imdb, imdb_votes: p.imdb_votes, imdb_url: p.imdb_url, year: p.year };
+    const r = { lb: p.lb, lb_count: p.lb_count, lb_url: p.lb_url, imdb: p.imdb, imdb_votes: p.imdb_votes, imdb_url: p.imdb_url, year: p.year, lists: p.lists };
     const venues = p.theaters.map((th) => {
       const shows = th.shows.map((s) => ({ ...s, title: p.title, theater: th }));
       const byDay = shows.slice(0, 4).map((s) => {
@@ -365,7 +368,7 @@ async function renderBest() {
         return s.url ? `<a class="t" style="--c:${COLORS[th.id]}" href="${esc(s.url)}" target="_blank" rel="noopener">${label}</a>` : `<span class="t">${label}</span>`;
       }).join("");
       const more = shows.length > 4 ? `<span class="t past" style="text-decoration:none">+${shows.length - 4} more</span>` : "";
-      return `<div class="vn" style="--c:${COLORS[th.id]}"><div class="vname" style="padding:0"><i></i><b>${esc(SHORT[th.id] || th.name)}</b></div><div class="times">${byDay}${more}</div></div>`;
+      return `<div class="vn" style="--c:${COLORS[th.id]}"><div class="vname" style="padding:0"><i></i><b>${th.film_url ? `<a class="fl" href="${esc(th.film_url)}" target="_blank" rel="noopener">${esc(SHORT[th.id] || th.name)}</a>` : esc(SHORT[th.id] || th.name)}</b></div><div class="times">${byDay}${more}</div></div>`;
     }).join("");
     const notes = p.notes.filter((n) => n !== "New").map((n) => `<span class="note-tag">${esc(n)}</span>`).join("") +
       p.events.map((e) => `<a class="evtag" href="${esc(e.url || "#")}" target="_blank" rel="noopener">★ ${esc(e.name)}</a>`).join("");
@@ -470,14 +473,20 @@ const kfmt = (n) => n >= 1e6 ? (n / 1e6).toFixed(1) + "M" : n >= 1e3 ? Math.roun
 function ratingChips(ss) { return chipsFrom(ratingFor(ss)); }
 // "New" = released this year or last (by IMDb year), as opposed to a repertory revival.
 const isNew = (year) => year && year >= Number(todayKey().slice(0, 4)) - 1;
+// Badges for best-of lists the film is on (NYT 100, RT 300, IMDb Top 250), matched by IMDb id.
+function listBadges(ls) {
+  return (ls || []).map((l) =>
+    `<a class="lst" href="${esc(l.url || "#")}" target="_blank" rel="noopener" title="${esc(l.name)}, #${l.rank}">${esc(l.short)} #${l.rank}</a>`).join("");
+}
 function chipsFrom(r) {
-  if (!r || (r.lb == null && r.imdb == null && !isNew(r.year))) return "";
+  const ls = r && (r.lists || ((data && data.lists) || {})[r.imdb_id]);
+  if (!r || (r.lb == null && r.imdb == null && !isNew(r.year) && !(ls && ls.length))) return "";
   const lb = r.lb != null
     ? `<a class="lb" href="${esc(r.lb_url)}" target="_blank" rel="noopener" title="Letterboxd${r.lb_count ? ", " + kfmt(r.lb_count) + " ratings" : ""}"><i><b style="color:#ff8000">●</b><b style="color:#00c04b">●</b><b style="color:#40bcf4">●</b></i>${r.lb.toFixed(1)}</a>` : "";
   const im = r.imdb != null
     ? `<a class="im" href="${esc(r.imdb_url)}" target="_blank" rel="noopener" title="IMDb${r.imdb_votes ? ", " + kfmt(r.imdb_votes) + " votes" : ""}"><small>IMDb</small>${r.imdb.toFixed(1)}</a>` : "";
   const nw = isNew(r.year) ? `<span class="new" title="Released ${r.year}">New</span>` : "";
-  return `<div class="rt">${nw}${lb}${im}${r.year ? `<span>${r.year}</span>` : ""}</div>`;
+  return `<div class="rt">${nw}${lb}${im}${r.year ? `<span>${r.year}</span>` : ""}${listBadges(ls)}</div>`;
 }
 
 function tags(ss) {
@@ -489,6 +498,12 @@ function tags(ss) {
   return [...evs.values()].map((e) =>
       `<a class="evtag" href="${esc(e.url || "#")}" target="_blank" rel="noopener">★ ${esc(e.name)}</a>`).join("") +
     [...series].map((n) => `<span class="evtag" style="background:var(--pill);color:var(--muted)">${esc(n)}</span>`).join("");
+}
+
+// The theater's own page for the film (description, credits), when the scraper found one.
+function filmLink(ss, label) {
+  const s = ss.find((x) => x.film_url);
+  return s ? `<a class="fl" href="${esc(s.film_url)}" target="_blank" rel="noopener" title="About this film at ${esc(s.theater.name)}">${label}</a>` : label;
 }
 
 function renderByFilm(rows, now) {
@@ -513,7 +528,7 @@ function renderByFilm(rows, now) {
       ${tags(f.all)}
       ${[...f.byT.entries()].map(([tid, ss]) => `
         <div class="venue" style="--c:${COLORS[tid]}">
-          <div class="vname"><i></i>${esc(SHORT[tid] || ss[0].theater.name)}</div>
+          <div class="vname"><i></i>${filmLink(ss, esc(SHORT[tid] || ss[0].theater.name))}</div>
           <div class="times">${ss.map((s) => pill(s, now)).join("")}</div>
         </div>`).join("")}
     </article>`).join("");
@@ -529,7 +544,7 @@ function renderByTheater(rows, now) {
     }
     const body = films.size
       ? [...films.entries()].map(([title, ss]) =>
-          `<div class="film-row"><b>${esc(title)}</b>${ratingChips(ss)}${tags(ss) ? `<div>${tags(ss)}</div>` : ""}<div class="times">${ss.map((s) => pill(s, now)).join("")}</div></div>`).join("")
+          `<div class="film-row"><b>${filmLink(ss, esc(title))}</b>${ratingChips(ss)}${tags(ss) ? `<div>${tags(ss)}</div>` : ""}<div class="times">${ss.map((s) => pill(s, now)).join("")}</div></div>`).join("")
       : `<div class="vname" style="padding:0">${t.error && !t.shows.length ? "Couldn't load this theater." : "Nothing scheduled."}</div>`;
     return `
       <div class="tsec" style="--c:${COLORS[t.id]}"><i></i><h3>${esc(t.name)}</h3>

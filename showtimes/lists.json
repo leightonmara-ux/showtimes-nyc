@@ -1,0 +1,3929 @@
+{
+  "updated": "2026-10-21",
+  "lists": {
+    "nyt100": {
+      "name": "NYT 100 Best of the 21st Century",
+      "short": "NYT 100",
+      "url": "https://www.nytimes.com/interactive/2025/movies/best-movies-21st-century.html",
+      "source_note": "The New York Times, 'The 100 Best Movies of the 21st Century' (June 2025; voted by 500+ directors, actors and others). Ranks, titles, years (NYT's own, which are US release years, e.g. Oldboy 2005) and IMDb ids taken from the data embedded in the NYT interactive, read from the Internet Archive snapshot of 2025-09-01 because nytimes.com was not reachable directly.",
+      "films": [
+        {
+          "rank": 1,
+          "title": "Parasite",
+          "year": 2019,
+          "imdb_id": "tt6751668"
+        },
+        {
+          "rank": 2,
+          "title": "Mulholland Drive",
+          "year": 2001,
+          "imdb_id": "tt0166924"
+        },
+        {
+          "rank": 3,
+          "title": "There Will Be Blood",
+          "year": 2007,
+          "imdb_id": "tt0469494"
+        },
+        {
+          "rank": 4,
+          "title": "In the Mood for Love",
+          "year": 2001,
+          "imdb_id": "tt0118694"
+        },
+        {
+          "rank": 5,
+          "title": "Moonlight",
+          "year": 2016,
+          "imdb_id": "tt4975722"
+        },
+        {
+          "rank": 6,
+          "title": "No Country for Old Men",
+          "year": 2007,
+          "imdb_id": "tt0477348"
+        },
+        {
+          "rank": 7,
+          "title": "Eternal Sunshine of the Spotless Mind",
+          "year": 2004,
+          "imdb_id": "tt0338013"
+        },
+        {
+          "rank": 8,
+          "title": "Get Out",
+          "year": 2017,
+          "imdb_id": "tt5052448"
+        },
+        {
+          "rank": 9,
+          "title": "Spirited Away",
+          "year": 2002,
+          "imdb_id": "tt0245429"
+        },
+        {
+          "rank": 10,
+          "title": "The Social Network",
+          "year": 2010,
+          "imdb_id": "tt1285016"
+        },
+        {
+          "rank": 11,
+          "title": "Mad Max: Fury Road",
+          "year": 2015,
+          "imdb_id": "tt1392190"
+        },
+        {
+          "rank": 12,
+          "title": "The Zone of Interest",
+          "year": 2023,
+          "imdb_id": "tt7160372"
+        },
+        {
+          "rank": 13,
+          "title": "Children of Men",
+          "year": 2006,
+          "imdb_id": "tt0206634"
+        },
+        {
+          "rank": 14,
+          "title": "Inglourious Basterds",
+          "year": 2009,
+          "imdb_id": "tt0361748"
+        },
+        {
+          "rank": 15,
+          "title": "City of God",
+          "year": 2003,
+          "imdb_id": "tt0317248"
+        },
+        {
+          "rank": 16,
+          "title": "Crouching Tiger, Hidden Dragon",
+          "year": 2000,
+          "imdb_id": "tt0190332"
+        },
+        {
+          "rank": 17,
+          "title": "Brokeback Mountain",
+          "year": 2005,
+          "imdb_id": "tt0388795"
+        },
+        {
+          "rank": 18,
+          "title": "Y tu mamá también",
+          "year": 2002,
+          "imdb_id": "tt0245574"
+        },
+        {
+          "rank": 19,
+          "title": "Zodiac",
+          "year": 2007,
+          "imdb_id": "tt0443706"
+        },
+        {
+          "rank": 20,
+          "title": "The Wolf of Wall Street",
+          "year": 2013,
+          "imdb_id": "tt0993846"
+        },
+        {
+          "rank": 21,
+          "title": "The Royal Tenenbaums",
+          "year": 2001,
+          "imdb_id": "tt0265666"
+        },
+        {
+          "rank": 22,
+          "title": "The Grand Budapest Hotel",
+          "year": 2014,
+          "imdb_id": "tt2278388"
+        },
+        {
+          "rank": 23,
+          "title": "Boyhood",
+          "year": 2014,
+          "imdb_id": "tt1065073"
+        },
+        {
+          "rank": 24,
+          "title": "Her",
+          "year": 2013,
+          "imdb_id": "tt1798709"
+        },
+        {
+          "rank": 25,
+          "title": "Phantom Thread",
+          "year": 2017,
+          "imdb_id": "tt5776858"
+        },
+        {
+          "rank": 26,
+          "title": "Anatomy of a Fall",
+          "year": 2023,
+          "imdb_id": "tt17009710"
+        },
+        {
+          "rank": 27,
+          "title": "Adaptation",
+          "year": 2002,
+          "imdb_id": "tt0268126"
+        },
+        {
+          "rank": 28,
+          "title": "The Dark Knight",
+          "year": 2008,
+          "imdb_id": "tt0468569"
+        },
+        {
+          "rank": 29,
+          "title": "Arrival",
+          "year": 2016,
+          "imdb_id": "tt2543164"
+        },
+        {
+          "rank": 30,
+          "title": "Lost in Translation",
+          "year": 2003,
+          "imdb_id": "tt0335266"
+        },
+        {
+          "rank": 31,
+          "title": "The Departed",
+          "year": 2006,
+          "imdb_id": "tt0407887"
+        },
+        {
+          "rank": 32,
+          "title": "Bridesmaids",
+          "year": 2011,
+          "imdb_id": "tt1478338"
+        },
+        {
+          "rank": 33,
+          "title": "A Separation",
+          "year": 2011,
+          "imdb_id": "tt1832382"
+        },
+        {
+          "rank": 34,
+          "title": "Wall-E",
+          "year": 2008,
+          "imdb_id": "tt0910970"
+        },
+        {
+          "rank": 35,
+          "title": "A Prophet",
+          "year": 2010,
+          "imdb_id": "tt1235166"
+        },
+        {
+          "rank": 36,
+          "title": "A Serious Man",
+          "year": 2009,
+          "imdb_id": "tt1019452"
+        },
+        {
+          "rank": 37,
+          "title": "Call Me by Your Name",
+          "year": 2017,
+          "imdb_id": "tt5726616"
+        },
+        {
+          "rank": 38,
+          "title": "Portrait of a Lady on Fire",
+          "year": 2019,
+          "imdb_id": "tt8613070"
+        },
+        {
+          "rank": 39,
+          "title": "Lady Bird",
+          "year": 2017,
+          "imdb_id": "tt4925292"
+        },
+        {
+          "rank": 40,
+          "title": "Yi Yi",
+          "year": 2000,
+          "imdb_id": "tt0244316"
+        },
+        {
+          "rank": 41,
+          "title": "Amélie",
+          "year": 2001,
+          "imdb_id": "tt0211915"
+        },
+        {
+          "rank": 42,
+          "title": "The Master",
+          "year": 2012,
+          "imdb_id": "tt1560747"
+        },
+        {
+          "rank": 43,
+          "title": "Oldboy",
+          "year": 2005,
+          "imdb_id": "tt0364569"
+        },
+        {
+          "rank": 44,
+          "title": "Once Upon a Time ... in Hollywood",
+          "year": 2019,
+          "imdb_id": "tt7131622"
+        },
+        {
+          "rank": 45,
+          "title": "Moneyball",
+          "year": 2011,
+          "imdb_id": "tt1210166"
+        },
+        {
+          "rank": 46,
+          "title": "Roma",
+          "year": 2018,
+          "imdb_id": "tt6155172"
+        },
+        {
+          "rank": 47,
+          "title": "Almost Famous",
+          "year": 2000,
+          "imdb_id": "tt0181875"
+        },
+        {
+          "rank": 48,
+          "title": "The Lives of Others",
+          "year": 2007,
+          "imdb_id": "tt0405094"
+        },
+        {
+          "rank": 49,
+          "title": "Before Sunset",
+          "year": 2004,
+          "imdb_id": "tt0381681"
+        },
+        {
+          "rank": 50,
+          "title": "Up",
+          "year": 2009,
+          "imdb_id": "tt1049413"
+        },
+        {
+          "rank": 51,
+          "title": "12 Years a Slave",
+          "year": 2013,
+          "imdb_id": "tt2024544"
+        },
+        {
+          "rank": 52,
+          "title": "The Favourite",
+          "year": 2018,
+          "imdb_id": "tt5083738"
+        },
+        {
+          "rank": 53,
+          "title": "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan",
+          "year": 2006,
+          "imdb_id": "tt0443453"
+        },
+        {
+          "rank": 54,
+          "title": "Pan’s Labyrinth",
+          "year": 2006,
+          "imdb_id": "tt0457430"
+        },
+        {
+          "rank": 55,
+          "title": "Inception",
+          "year": 2010,
+          "imdb_id": "tt1375666"
+        },
+        {
+          "rank": 56,
+          "title": "Punch-Drunk Love",
+          "year": 2002,
+          "imdb_id": "tt0272338"
+        },
+        {
+          "rank": 57,
+          "title": "Best in Show",
+          "year": 2000,
+          "imdb_id": "tt0218839"
+        },
+        {
+          "rank": 58,
+          "title": "Uncut Gems",
+          "year": 2019,
+          "imdb_id": "tt5727208"
+        },
+        {
+          "rank": 59,
+          "title": "Toni Erdmann",
+          "year": 2016,
+          "imdb_id": "tt4048272"
+        },
+        {
+          "rank": 60,
+          "title": "Whiplash",
+          "year": 2014,
+          "imdb_id": "tt2582802"
+        },
+        {
+          "rank": 61,
+          "title": "Kill Bill: Vol. 1",
+          "year": 2003,
+          "imdb_id": "tt0266697"
+        },
+        {
+          "rank": 62,
+          "title": "Memento",
+          "year": 2001,
+          "imdb_id": "tt0209144"
+        },
+        {
+          "rank": 63,
+          "title": "Little Miss Sunshine",
+          "year": 2006,
+          "imdb_id": "tt0449059"
+        },
+        {
+          "rank": 64,
+          "title": "Gone Girl",
+          "year": 2014,
+          "imdb_id": "tt2267998"
+        },
+        {
+          "rank": 65,
+          "title": "Oppenheimer",
+          "year": 2023,
+          "imdb_id": "tt15398776"
+        },
+        {
+          "rank": 66,
+          "title": "Spotlight",
+          "year": 2015,
+          "imdb_id": "tt1895587"
+        },
+        {
+          "rank": 67,
+          "title": "Tár",
+          "year": 2022,
+          "imdb_id": "tt14444726"
+        },
+        {
+          "rank": 68,
+          "title": "The Hurt Locker",
+          "year": 2009,
+          "imdb_id": "tt0887912"
+        },
+        {
+          "rank": 69,
+          "title": "Under the Skin",
+          "year": 2014,
+          "imdb_id": "tt1441395"
+        },
+        {
+          "rank": 70,
+          "title": "Let the Right One In",
+          "year": 2008,
+          "imdb_id": "tt1139797"
+        },
+        {
+          "rank": 71,
+          "title": "Ocean’s Eleven",
+          "year": 2001,
+          "imdb_id": "tt0240772"
+        },
+        {
+          "rank": 72,
+          "title": "Carol",
+          "year": 2015,
+          "imdb_id": "tt2402927"
+        },
+        {
+          "rank": 73,
+          "title": "Ratatouille",
+          "year": 2007,
+          "imdb_id": "tt0382932"
+        },
+        {
+          "rank": 74,
+          "title": "The Florida Project",
+          "year": 2017,
+          "imdb_id": "tt5649144"
+        },
+        {
+          "rank": 75,
+          "title": "Amour",
+          "year": 2012,
+          "imdb_id": "tt1602620"
+        },
+        {
+          "rank": 76,
+          "title": "O Brother, Where Art Thou?",
+          "year": 2000,
+          "imdb_id": "tt0190590"
+        },
+        {
+          "rank": 77,
+          "title": "Everything Everywhere All at Once",
+          "year": 2022,
+          "imdb_id": "tt6710474"
+        },
+        {
+          "rank": 78,
+          "title": "Aftersun",
+          "year": 2022,
+          "imdb_id": "tt19770238"
+        },
+        {
+          "rank": 79,
+          "title": "The Tree of Life",
+          "year": 2011,
+          "imdb_id": "tt0478304"
+        },
+        {
+          "rank": 80,
+          "title": "Volver",
+          "year": 2006,
+          "imdb_id": "tt0441909"
+        },
+        {
+          "rank": 81,
+          "title": "Black Swan",
+          "year": 2010,
+          "imdb_id": "tt0947798"
+        },
+        {
+          "rank": 82,
+          "title": "The Act of Killing",
+          "year": 2013,
+          "imdb_id": "tt2375605"
+        },
+        {
+          "rank": 83,
+          "title": "Inside Llewyn Davis",
+          "year": 2013,
+          "imdb_id": "tt2042568"
+        },
+        {
+          "rank": 84,
+          "title": "Melancholia",
+          "year": 2011,
+          "imdb_id": "tt1527186"
+        },
+        {
+          "rank": 85,
+          "title": "Anchorman: The Legend of Ron Burgundy",
+          "year": 2004,
+          "imdb_id": "tt0357413"
+        },
+        {
+          "rank": 86,
+          "title": "Past Lives",
+          "year": 2023,
+          "imdb_id": "tt13238346"
+        },
+        {
+          "rank": 87,
+          "title": "The Lord of the Rings: The Fellowship of the Ring",
+          "year": 2001,
+          "imdb_id": "tt0120737"
+        },
+        {
+          "rank": 88,
+          "title": "The Gleaners & I",
+          "year": 2001,
+          "imdb_id": "tt0247380"
+        },
+        {
+          "rank": 89,
+          "title": "Interstellar",
+          "year": 2014,
+          "imdb_id": "tt0816692"
+        },
+        {
+          "rank": 90,
+          "title": "Frances Ha",
+          "year": 2013,
+          "imdb_id": "tt2347569"
+        },
+        {
+          "rank": 91,
+          "title": "Fish Tank",
+          "year": 2010,
+          "imdb_id": "tt1232776"
+        },
+        {
+          "rank": 92,
+          "title": "Gladiator",
+          "year": 2000,
+          "imdb_id": "tt0172495"
+        },
+        {
+          "rank": 93,
+          "title": "Michael Clayton",
+          "year": 2007,
+          "imdb_id": "tt0465538"
+        },
+        {
+          "rank": 94,
+          "title": "Minority Report",
+          "year": 2002,
+          "imdb_id": "tt0181689"
+        },
+        {
+          "rank": 95,
+          "title": "The Worst Person in the World",
+          "year": 2021,
+          "imdb_id": "tt10370710"
+        },
+        {
+          "rank": 96,
+          "title": "Black Panther",
+          "year": 2018,
+          "imdb_id": "tt1825683"
+        },
+        {
+          "rank": 97,
+          "title": "Gravity",
+          "year": 2013,
+          "imdb_id": "tt1454468"
+        },
+        {
+          "rank": 98,
+          "title": "Grizzly Man",
+          "year": 2005,
+          "imdb_id": "tt0427312"
+        },
+        {
+          "rank": 99,
+          "title": "Memories of Murder",
+          "year": 2005,
+          "imdb_id": "tt0353969"
+        },
+        {
+          "rank": 100,
+          "title": "Superbad",
+          "year": 2007,
+          "imdb_id": "tt0829482"
+        }
+      ]
+    },
+    "rt300": {
+      "name": "Rotten Tomatoes 300 Best Movies of All Time",
+      "short": "RT 300",
+      "url": "https://editorial.rottentomatoes.com/guide/best-movies-of-all-time/",
+      "source_note": "Rotten Tomatoes editorial guide '300 Best Movies of All Time' (Certified Fresh films ranked by RT's recommendation formula of Tomatometer plus Popcornmeter, with an editorial pass), page marked updated 2025-12-15, fetched 2026-10-21. Years are as RT lists them. IMDb ids resolved through IMDb's suggestion endpoint; 16 matched by hand (e.g. The Decalogue -> Dekalog miniseries, Jalsaghar -> The Music Room).",
+      "films": [
+        {
+          "rank": 1,
+          "title": "The Godfather",
+          "year": 1972,
+          "imdb_id": "tt0068646"
+        },
+        {
+          "rank": 2,
+          "title": "Seven Samurai",
+          "year": 1954,
+          "imdb_id": "tt0047478"
+        },
+        {
+          "rank": 3,
+          "title": "Casablanca",
+          "year": 1942,
+          "imdb_id": "tt0034583"
+        },
+        {
+          "rank": 4,
+          "title": "Rear Window",
+          "year": 1954,
+          "imdb_id": "tt0047396"
+        },
+        {
+          "rank": 5,
+          "title": "L.A. Confidential",
+          "year": 1997,
+          "imdb_id": "tt0119488"
+        },
+        {
+          "rank": 6,
+          "title": "On the Waterfront",
+          "year": 1954,
+          "imdb_id": "tt0047296"
+        },
+        {
+          "rank": 7,
+          "title": "Chinatown",
+          "year": 1974,
+          "imdb_id": "tt0071315"
+        },
+        {
+          "rank": 8,
+          "title": "Modern Times",
+          "year": 1936,
+          "imdb_id": "tt0027977"
+        },
+        {
+          "rank": 9,
+          "title": "The Battle of Algiers",
+          "year": 1966,
+          "imdb_id": "tt0058946"
+        },
+        {
+          "rank": 10,
+          "title": "Schindler's List",
+          "year": 1993,
+          "imdb_id": "tt0108052"
+        },
+        {
+          "rank": 11,
+          "title": "12 Angry Men",
+          "year": 1957,
+          "imdb_id": "tt0050083"
+        },
+        {
+          "rank": 12,
+          "title": "All About Eve",
+          "year": 1950,
+          "imdb_id": "tt0042192"
+        },
+        {
+          "rank": 13,
+          "title": "Parasite",
+          "year": 2019,
+          "imdb_id": "tt6751668"
+        },
+        {
+          "rank": 14,
+          "title": "Singin' in the Rain",
+          "year": 1952,
+          "imdb_id": "tt0045152"
+        },
+        {
+          "rank": 15,
+          "title": "Stop Making Sense",
+          "year": 1984,
+          "imdb_id": "tt0088178"
+        },
+        {
+          "rank": 16,
+          "title": "Sunset Boulevard",
+          "year": 1950,
+          "imdb_id": "tt0043014"
+        },
+        {
+          "rank": 17,
+          "title": "Toy Story",
+          "year": 1995,
+          "imdb_id": "tt0114709"
+        },
+        {
+          "rank": 18,
+          "title": "The Third Man",
+          "year": 1949,
+          "imdb_id": "tt0041959"
+        },
+        {
+          "rank": 19,
+          "title": "Toy Story 2",
+          "year": 1999,
+          "imdb_id": "tt0120363"
+        },
+        {
+          "rank": 20,
+          "title": "Top Gun: Maverick",
+          "year": 2022,
+          "imdb_id": "tt1745960"
+        },
+        {
+          "rank": 21,
+          "title": "Star Wars: Episode IV - A New Hope",
+          "year": 1977,
+          "imdb_id": "tt0076759"
+        },
+        {
+          "rank": 22,
+          "title": "Godzilla Minus One",
+          "year": 2023,
+          "imdb_id": "tt23289160"
+        },
+        {
+          "rank": 23,
+          "title": "Cool Hand Luke",
+          "year": 1967,
+          "imdb_id": "tt0061512"
+        },
+        {
+          "rank": 24,
+          "title": "The Philadelphia Story",
+          "year": 1940,
+          "imdb_id": "tt0032904"
+        },
+        {
+          "rank": 25,
+          "title": "How to Train Your Dragon",
+          "year": 2010,
+          "imdb_id": "tt0892769"
+        },
+        {
+          "rank": 26,
+          "title": "M",
+          "year": 1931,
+          "imdb_id": "tt0022100"
+        },
+        {
+          "rank": 27,
+          "title": "Citizen Kane",
+          "year": 1941,
+          "imdb_id": "tt0033467"
+        },
+        {
+          "rank": 28,
+          "title": "The Godfather Part II",
+          "year": 1974,
+          "imdb_id": "tt0071562"
+        },
+        {
+          "rank": 29,
+          "title": "Three Colors: Red",
+          "year": 1994,
+          "imdb_id": "tt0111495"
+        },
+        {
+          "rank": 30,
+          "title": "The Decalogue",
+          "year": 1989,
+          "imdb_id": "tt0092337"
+        },
+        {
+          "rank": 31,
+          "title": "A Separation",
+          "year": 2011,
+          "imdb_id": "tt1832382"
+        },
+        {
+          "rank": 32,
+          "title": "The Kid",
+          "year": 1921,
+          "imdb_id": "tt0012349"
+        },
+        {
+          "rank": 33,
+          "title": "Summer of Soul (...Or, When the Revolution Could Not Be Televised)",
+          "year": 2021,
+          "imdb_id": "tt7378922"
+        },
+        {
+          "rank": 34,
+          "title": "Toy Story 3",
+          "year": 2010,
+          "imdb_id": "tt0435761"
+        },
+        {
+          "rank": 35,
+          "title": "Finding Nemo",
+          "year": 2003,
+          "imdb_id": "tt0266543"
+        },
+        {
+          "rank": 36,
+          "title": "Dr. Strangelove Or: How I Learned to Stop Worrying and Love the Bomb",
+          "year": 1964,
+          "imdb_id": "tt0057012"
+        },
+        {
+          "rank": 37,
+          "title": "Still: A Michael J. Fox Movie",
+          "year": 2023,
+          "imdb_id": "tt19853258"
+        },
+        {
+          "rank": 38,
+          "title": "Sinners",
+          "year": 2025,
+          "imdb_id": "tt31193180"
+        },
+        {
+          "rank": 39,
+          "title": "Up",
+          "year": 2009,
+          "imdb_id": "tt1049413"
+        },
+        {
+          "rank": 40,
+          "title": "The Wages of Fear",
+          "year": 1953,
+          "imdb_id": "tt0046268"
+        },
+        {
+          "rank": 41,
+          "title": "The Maltese Falcon",
+          "year": 1941,
+          "imdb_id": "tt0033870"
+        },
+        {
+          "rank": 42,
+          "title": "Spotlight",
+          "year": 2015,
+          "imdb_id": "tt1895587"
+        },
+        {
+          "rank": 43,
+          "title": "The Wrestler",
+          "year": 2008,
+          "imdb_id": "tt1125849"
+        },
+        {
+          "rank": 44,
+          "title": "Grave of the Fireflies",
+          "year": 1988,
+          "imdb_id": "tt0095327"
+        },
+        {
+          "rank": 45,
+          "title": "North by Northwest",
+          "year": 1959,
+          "imdb_id": "tt0053125"
+        },
+        {
+          "rank": 46,
+          "title": "Psycho",
+          "year": 1960,
+          "imdb_id": "tt0054215"
+        },
+        {
+          "rank": 47,
+          "title": "Bicycle Thieves",
+          "year": 1948,
+          "imdb_id": "tt0040522"
+        },
+        {
+          "rank": 48,
+          "title": "Spider-Man: Into the Spider-Verse",
+          "year": 2018,
+          "imdb_id": "tt4633694"
+        },
+        {
+          "rank": 49,
+          "title": "The Wizard of Oz",
+          "year": 1939,
+          "imdb_id": "tt0032138"
+        },
+        {
+          "rank": 50,
+          "title": "The Father",
+          "year": 2020,
+          "imdb_id": "tt10272386"
+        },
+        {
+          "rank": 51,
+          "title": "It Happened One Night",
+          "year": 1934,
+          "imdb_id": "tt0025316"
+        },
+        {
+          "rank": 52,
+          "title": "Spirited Away",
+          "year": 2001,
+          "imdb_id": "tt0245429"
+        },
+        {
+          "rank": 53,
+          "title": "The Treasure of the Sierra Madre",
+          "year": 1948,
+          "imdb_id": "tt0040897"
+        },
+        {
+          "rank": 54,
+          "title": "The 400 Blows",
+          "year": 1959,
+          "imdb_id": "tt0053198"
+        },
+        {
+          "rank": 55,
+          "title": "Zootopia",
+          "year": 2016,
+          "imdb_id": "tt2948356"
+        },
+        {
+          "rank": 56,
+          "title": "Double Indemnity",
+          "year": 1944,
+          "imdb_id": "tt0036775"
+        },
+        {
+          "rank": 57,
+          "title": "Annie Hall",
+          "year": 1977,
+          "imdb_id": "tt0075686"
+        },
+        {
+          "rank": 58,
+          "title": "Man on Wire",
+          "year": 2008,
+          "imdb_id": "tt1155592"
+        },
+        {
+          "rank": 59,
+          "title": "Wallace & Gromit: Vengeance Most Fowl",
+          "year": 2024,
+          "imdb_id": "tt17163970"
+        },
+        {
+          "rank": 60,
+          "title": "Coco",
+          "year": 2017,
+          "imdb_id": "tt2380307"
+        },
+        {
+          "rank": 61,
+          "title": "The Wild Robot",
+          "year": 2024,
+          "imdb_id": "tt29623480"
+        },
+        {
+          "rank": 62,
+          "title": "Inside Out",
+          "year": 2015,
+          "imdb_id": "tt2096673"
+        },
+        {
+          "rank": 63,
+          "title": "The Sorrow and the Pity",
+          "year": 1969,
+          "imdb_id": "tt0066904"
+        },
+        {
+          "rank": 64,
+          "title": "Shoplifters",
+          "year": 2018,
+          "imdb_id": "tt8075192"
+        },
+        {
+          "rank": 65,
+          "title": "Kind Hearts and Coronets",
+          "year": 1949,
+          "imdb_id": "tt0041546"
+        },
+        {
+          "rank": 66,
+          "title": "Tampopo",
+          "year": 1985,
+          "imdb_id": "tt0092048"
+        },
+        {
+          "rank": 67,
+          "title": "Mission: Impossible - Fallout",
+          "year": 2018,
+          "imdb_id": "tt4912910"
+        },
+        {
+          "rank": 68,
+          "title": "Witness for the Prosecution",
+          "year": 1957,
+          "imdb_id": "tt0051201"
+        },
+        {
+          "rank": 69,
+          "title": "Tokyo Story",
+          "year": 1953,
+          "imdb_id": "tt0046438"
+        },
+        {
+          "rank": 70,
+          "title": "Before Sunrise",
+          "year": 1995,
+          "imdb_id": "tt0112471"
+        },
+        {
+          "rank": 71,
+          "title": "Jaws",
+          "year": 1975,
+          "imdb_id": "tt0073195"
+        },
+        {
+          "rank": 72,
+          "title": "Wolfwalkers",
+          "year": 2020,
+          "imdb_id": "tt5198068"
+        },
+        {
+          "rank": 73,
+          "title": "Nights of Cabiria",
+          "year": 1957,
+          "imdb_id": "tt0050783"
+        },
+        {
+          "rank": 74,
+          "title": "The Good, the Bad and the Ugly",
+          "year": 1966,
+          "imdb_id": "tt0060196"
+        },
+        {
+          "rank": 75,
+          "title": "Alien",
+          "year": 1979,
+          "imdb_id": "tt0078748"
+        },
+        {
+          "rank": 76,
+          "title": "Selma",
+          "year": 2014,
+          "imdb_id": "tt1020072"
+        },
+        {
+          "rank": 77,
+          "title": "I'm Still Here",
+          "year": 2024,
+          "imdb_id": "tt14961016"
+        },
+        {
+          "rank": 78,
+          "title": "Metropolis",
+          "year": 1927,
+          "imdb_id": "tt0017136"
+        },
+        {
+          "rank": 79,
+          "title": "Are You There God? It's Me, Margaret.",
+          "year": 2023,
+          "imdb_id": "tt9185206"
+        },
+        {
+          "rank": 80,
+          "title": "A Man Escaped",
+          "year": 1956,
+          "imdb_id": "tt0049902"
+        },
+        {
+          "rank": 81,
+          "title": "Paddington 2",
+          "year": 2017,
+          "imdb_id": "tt4468740"
+        },
+        {
+          "rank": 82,
+          "title": "All About My Mother",
+          "year": 1999,
+          "imdb_id": "tt0185125"
+        },
+        {
+          "rank": 83,
+          "title": "Fanny and Alexander",
+          "year": 1982,
+          "imdb_id": "tt0083922"
+        },
+        {
+          "rank": 84,
+          "title": "The Last Picture Show",
+          "year": 1971,
+          "imdb_id": "tt0067328"
+        },
+        {
+          "rank": 85,
+          "title": "Pather Panchali",
+          "year": 1955,
+          "imdb_id": "tt0048473"
+        },
+        {
+          "rank": 86,
+          "title": "Stalker",
+          "year": 1979,
+          "imdb_id": "tt0079944"
+        },
+        {
+          "rank": 87,
+          "title": "A Hard Day's Night",
+          "year": 1964,
+          "imdb_id": "tt0058182"
+        },
+        {
+          "rank": 88,
+          "title": "Minding the Gap",
+          "year": 2018,
+          "imdb_id": "tt7476236"
+        },
+        {
+          "rank": 89,
+          "title": "Laura",
+          "year": 1944,
+          "imdb_id": "tt0037008"
+        },
+        {
+          "rank": 90,
+          "title": "Let the Right One In",
+          "year": 2008,
+          "imdb_id": "tt1139797"
+        },
+        {
+          "rank": 91,
+          "title": "No Other Land",
+          "year": 2024,
+          "imdb_id": "tt30953759"
+        },
+        {
+          "rank": 92,
+          "title": "Crip Camp",
+          "year": 2020,
+          "imdb_id": "tt8923484"
+        },
+        {
+          "rank": 93,
+          "title": "The Best Years of Our Lives",
+          "year": 1946,
+          "imdb_id": "tt0036868"
+        },
+        {
+          "rank": 94,
+          "title": "All Quiet on the Western Front",
+          "year": 1930,
+          "imdb_id": "tt0020629"
+        },
+        {
+          "rank": 95,
+          "title": "The Shop Around the Corner",
+          "year": 1940,
+          "imdb_id": "tt0033045"
+        },
+        {
+          "rank": 96,
+          "title": "Rome, Open City",
+          "year": 1945,
+          "imdb_id": "tt0038890"
+        },
+        {
+          "rank": 97,
+          "title": "Ikiru",
+          "year": 1952,
+          "imdb_id": "tt0044741"
+        },
+        {
+          "rank": 98,
+          "title": "His Girl Friday",
+          "year": 1940,
+          "imdb_id": "tt0032599"
+        },
+        {
+          "rank": 99,
+          "title": "Knives Out",
+          "year": 2019,
+          "imdb_id": "tt8946378"
+        },
+        {
+          "rank": 100,
+          "title": "The Gold Rush",
+          "year": 1925,
+          "imdb_id": "tt0015864"
+        },
+        {
+          "rank": 101,
+          "title": "Short Term 12",
+          "year": 2013,
+          "imdb_id": "tt2370248"
+        },
+        {
+          "rank": 102,
+          "title": "Anatomy of a Murder",
+          "year": 1959,
+          "imdb_id": "tt0052561"
+        },
+        {
+          "rank": 103,
+          "title": "Ghostlight",
+          "year": 2024,
+          "imdb_id": "tt30321095"
+        },
+        {
+          "rank": 104,
+          "title": "Apollo 11",
+          "year": 2019,
+          "imdb_id": "tt8760684"
+        },
+        {
+          "rank": 105,
+          "title": "Super/Man: The Christopher Reeve Story",
+          "year": 2024,
+          "imdb_id": "tt27902121"
+        },
+        {
+          "rank": 106,
+          "title": "Your Name",
+          "year": 2016,
+          "imdb_id": "tt5311514"
+        },
+        {
+          "rank": 107,
+          "title": "They Shall Not Grow Old",
+          "year": 2018,
+          "imdb_id": "tt7905466"
+        },
+        {
+          "rank": 108,
+          "title": "La Strada",
+          "year": 1954,
+          "imdb_id": "tt0047528"
+        },
+        {
+          "rank": 109,
+          "title": "The Holdovers",
+          "year": 2023,
+          "imdb_id": "tt14849194"
+        },
+        {
+          "rank": 110,
+          "title": "Won't You Be My Neighbor?",
+          "year": 2018,
+          "imdb_id": "tt7681902"
+        },
+        {
+          "rank": 111,
+          "title": "The Lord of the Rings: The Two Towers",
+          "year": 2002,
+          "imdb_id": "tt0167261"
+        },
+        {
+          "rank": 112,
+          "title": "The Terminator",
+          "year": 1984,
+          "imdb_id": "tt0088247"
+        },
+        {
+          "rank": 113,
+          "title": "Sanjuro",
+          "year": 1962,
+          "imdb_id": "tt0056443"
+        },
+        {
+          "rank": 114,
+          "title": "Rebecca",
+          "year": 1940,
+          "imdb_id": "tt0032976"
+        },
+        {
+          "rank": 115,
+          "title": "Inside Job",
+          "year": 2010,
+          "imdb_id": "tt1645089"
+        },
+        {
+          "rank": 116,
+          "title": "Night and Fog",
+          "year": 1955,
+          "imdb_id": "tt0048434"
+        },
+        {
+          "rank": 117,
+          "title": "The Seed of the Sacred Fig",
+          "year": 2024,
+          "imdb_id": "tt32178949"
+        },
+        {
+          "rank": 118,
+          "title": "Shadow of a Doubt",
+          "year": 1943,
+          "imdb_id": "tt0036342"
+        },
+        {
+          "rank": 119,
+          "title": "007: Goldfinger",
+          "year": 1964,
+          "imdb_id": "tt0058150"
+        },
+        {
+          "rank": 120,
+          "title": "Murderball",
+          "year": 2005,
+          "imdb_id": "tt0436613"
+        },
+        {
+          "rank": 121,
+          "title": "High and Low",
+          "year": 1963,
+          "imdb_id": "tt0057565"
+        },
+        {
+          "rank": 122,
+          "title": "Woman in the Dunes",
+          "year": 1964,
+          "imdb_id": "tt0058625"
+        },
+        {
+          "rank": 123,
+          "title": "The Lady Eve",
+          "year": 1941,
+          "imdb_id": "tt0033804"
+        },
+        {
+          "rank": 124,
+          "title": "The Last Waltz",
+          "year": 1978,
+          "imdb_id": "tt0077838"
+        },
+        {
+          "rank": 125,
+          "title": "Ali: Fear Eats the Soul",
+          "year": 1974,
+          "imdb_id": "tt0071141"
+        },
+        {
+          "rank": 126,
+          "title": "Ugetsu",
+          "year": 1953,
+          "imdb_id": "tt0046478"
+        },
+        {
+          "rank": 127,
+          "title": "Get Out",
+          "year": 2017,
+          "imdb_id": "tt5052448"
+        },
+        {
+          "rank": 128,
+          "title": "Army of Shadows",
+          "year": 1969,
+          "imdb_id": "tt0064040"
+        },
+        {
+          "rank": 129,
+          "title": "Portrait of a Lady on Fire",
+          "year": 2019,
+          "imdb_id": "tt8613070"
+        },
+        {
+          "rank": 130,
+          "title": "The Big Sick",
+          "year": 2017,
+          "imdb_id": "tt5462602"
+        },
+        {
+          "rank": 131,
+          "title": "The Adventures of Robin Hood",
+          "year": 1938,
+          "imdb_id": "tt0029843"
+        },
+        {
+          "rank": 132,
+          "title": "Anvil! The Story of Anvil",
+          "year": 2008,
+          "imdb_id": "tt1157605"
+        },
+        {
+          "rank": 133,
+          "title": "Good Will Hunting",
+          "year": 1997,
+          "imdb_id": "tt0119217"
+        },
+        {
+          "rank": 134,
+          "title": "Maiden",
+          "year": 2018,
+          "imdb_id": "tt8879946"
+        },
+        {
+          "rank": 135,
+          "title": "I Am Cuba",
+          "year": 1964,
+          "imdb_id": "tt0058604"
+        },
+        {
+          "rank": 136,
+          "title": "The Passion of Joan of Arc",
+          "year": 1928,
+          "imdb_id": "tt0019254"
+        },
+        {
+          "rank": 137,
+          "title": "Argo",
+          "year": 2012,
+          "imdb_id": "tt1024648"
+        },
+        {
+          "rank": 138,
+          "title": "Crouching Tiger, Hidden Dragon",
+          "year": 2000,
+          "imdb_id": "tt0190332"
+        },
+        {
+          "rank": 139,
+          "title": "The Silence of the Lambs",
+          "year": 1991,
+          "imdb_id": "tt0102926"
+        },
+        {
+          "rank": 140,
+          "title": "Goodfellas",
+          "year": 1990,
+          "imdb_id": "tt0099685"
+        },
+        {
+          "rank": 141,
+          "title": "Collective",
+          "year": 2019,
+          "imdb_id": "tt10706602"
+        },
+        {
+          "rank": 142,
+          "title": "Safety Last",
+          "year": 1923,
+          "imdb_id": "tt0014429"
+        },
+        {
+          "rank": 143,
+          "title": "Toy Story 4",
+          "year": 2019,
+          "imdb_id": "tt1979376"
+        },
+        {
+          "rank": 144,
+          "title": "Mr. Smith Goes to Washington",
+          "year": 1939,
+          "imdb_id": "tt0031679"
+        },
+        {
+          "rank": 145,
+          "title": "The Pianist",
+          "year": 2002,
+          "imdb_id": "tt0253474"
+        },
+        {
+          "rank": 146,
+          "title": "My Life as a Zucchini",
+          "year": 2016,
+          "imdb_id": "tt2321405"
+        },
+        {
+          "rank": 147,
+          "title": "The Ascent",
+          "year": 1977,
+          "imdb_id": "tt0075404"
+        },
+        {
+          "rank": 148,
+          "title": "Mad Max: Fury Road",
+          "year": 2015,
+          "imdb_id": "tt1392190"
+        },
+        {
+          "rank": 149,
+          "title": "Faces Places",
+          "year": 2017,
+          "imdb_id": "tt5598102"
+        },
+        {
+          "rank": 150,
+          "title": "Minari",
+          "year": 2020,
+          "imdb_id": "tt10633456"
+        },
+        {
+          "rank": 151,
+          "title": "BlackBerry",
+          "year": 2023,
+          "imdb_id": "tt21867434"
+        },
+        {
+          "rank": 152,
+          "title": "The Lavender Hill Mob",
+          "year": 1951,
+          "imdb_id": "tt0044829"
+        },
+        {
+          "rank": 153,
+          "title": "Das Boot",
+          "year": 1981,
+          "imdb_id": "tt0082096"
+        },
+        {
+          "rank": 154,
+          "title": "Once",
+          "year": 2007,
+          "imdb_id": "tt0907657"
+        },
+        {
+          "rank": 155,
+          "title": "The Dark Knight",
+          "year": 2008,
+          "imdb_id": "tt0468569"
+        },
+        {
+          "rank": 156,
+          "title": "Ivan's Childhood",
+          "year": 1963,
+          "imdb_id": "tt0056111"
+        },
+        {
+          "rank": 157,
+          "title": "Rashomon",
+          "year": 1950,
+          "imdb_id": "tt0042876"
+        },
+        {
+          "rank": 158,
+          "title": "Kes",
+          "year": 1969,
+          "imdb_id": "tt0064541"
+        },
+        {
+          "rank": 159,
+          "title": "Wadjda",
+          "year": 2012,
+          "imdb_id": "tt2258858"
+        },
+        {
+          "rank": 160,
+          "title": "Beauty and the Beast",
+          "year": 1991,
+          "imdb_id": "tt0101414"
+        },
+        {
+          "rank": 161,
+          "title": "Top Hat",
+          "year": 1935,
+          "imdb_id": "tt0027125"
+        },
+        {
+          "rank": 162,
+          "title": "Mission: Impossible - Dead Reckoning Part One",
+          "year": 2023,
+          "imdb_id": "tt9603212"
+        },
+        {
+          "rank": 163,
+          "title": "Sansho the Bailiff",
+          "year": 1954,
+          "imdb_id": "tt0047445"
+        },
+        {
+          "rank": 164,
+          "title": "Marcel the Shell with Shoes On",
+          "year": 2021,
+          "imdb_id": "tt15339456"
+        },
+        {
+          "rank": 165,
+          "title": "Spider-Man: Across the Spider-Verse",
+          "year": 2023,
+          "imdb_id": "tt9362722"
+        },
+        {
+          "rank": 166,
+          "title": "When We Were Kings",
+          "year": 1996,
+          "imdb_id": "tt0118147"
+        },
+        {
+          "rank": 167,
+          "title": "Life Itself",
+          "year": 2014,
+          "imdb_id": "tt2382298"
+        },
+        {
+          "rank": 168,
+          "title": "The Bridge on the River Kwai",
+          "year": 1957,
+          "imdb_id": "tt0050212"
+        },
+        {
+          "rank": 169,
+          "title": "Woodstock",
+          "year": 1970,
+          "imdb_id": "tt0066580"
+        },
+        {
+          "rank": 170,
+          "title": "Winter Soldier",
+          "year": 1972,
+          "imdb_id": "tt0204058"
+        },
+        {
+          "rank": 171,
+          "title": "Harry Potter and the Deathly Hallows: Part 2",
+          "year": 2011,
+          "imdb_id": "tt1201607"
+        },
+        {
+          "rank": 172,
+          "title": "Waltz With Bashir",
+          "year": 2008,
+          "imdb_id": "tt1185616"
+        },
+        {
+          "rank": 173,
+          "title": "Raiders of the Lost Ark",
+          "year": 1981,
+          "imdb_id": "tt0082971"
+        },
+        {
+          "rank": 174,
+          "title": "Through a Glass Darkly",
+          "year": 1961,
+          "imdb_id": "tt0055499"
+        },
+        {
+          "rank": 175,
+          "title": "Hamilton",
+          "year": 2020,
+          "imdb_id": "tt8503618"
+        },
+        {
+          "rank": 176,
+          "title": "Honeyland",
+          "year": 2019,
+          "imdb_id": "tt8991268"
+        },
+        {
+          "rank": 177,
+          "title": "The Red Shoes",
+          "year": 1948,
+          "imdb_id": "tt0040725"
+        },
+        {
+          "rank": 178,
+          "title": "The Promised Land",
+          "year": 2023,
+          "imdb_id": "tt20561198"
+        },
+        {
+          "rank": 179,
+          "title": "Corpus Christi",
+          "year": 2019,
+          "imdb_id": "tt8649186"
+        },
+        {
+          "rank": 180,
+          "title": "Children of Paradise",
+          "year": 1945,
+          "imdb_id": "tt0037674"
+        },
+        {
+          "rank": 181,
+          "title": "The King of Kong: A Fistful of Quarters",
+          "year": 2007,
+          "imdb_id": "tt0923752"
+        },
+        {
+          "rank": 182,
+          "title": "The Fog of War",
+          "year": 2003,
+          "imdb_id": "tt0317910"
+        },
+        {
+          "rank": 183,
+          "title": "Blackfish",
+          "year": 2013,
+          "imdb_id": "tt2545118"
+        },
+        {
+          "rank": 184,
+          "title": "Harlan County, U.S.A.",
+          "year": 1976,
+          "imdb_id": "tt0074605"
+        },
+        {
+          "rank": 185,
+          "title": "Sound of Metal",
+          "year": 2019,
+          "imdb_id": "tt5363618"
+        },
+        {
+          "rank": 186,
+          "title": "Flow",
+          "year": 2024,
+          "imdb_id": "tt4772188"
+        },
+        {
+          "rank": 187,
+          "title": "The Rescue",
+          "year": 2021,
+          "imdb_id": "tt9098872"
+        },
+        {
+          "rank": 188,
+          "title": "Hunt for the Wilderpeople",
+          "year": 2016,
+          "imdb_id": "tt4698684"
+        },
+        {
+          "rank": 189,
+          "title": "Flee",
+          "year": 2021,
+          "imdb_id": "tt8430054"
+        },
+        {
+          "rank": 190,
+          "title": "Hoop Dreams",
+          "year": 1994,
+          "imdb_id": "tt0110057"
+        },
+        {
+          "rank": 191,
+          "title": "Tower",
+          "year": 2016,
+          "imdb_id": "tt5116410"
+        },
+        {
+          "rank": 192,
+          "title": "Capturing the Friedmans",
+          "year": 2003,
+          "imdb_id": "tt0342172"
+        },
+        {
+          "rank": 193,
+          "title": "The Mirror",
+          "year": 1975,
+          "imdb_id": "tt0072443"
+        },
+        {
+          "rank": 194,
+          "title": "Meet Me in St. Louis",
+          "year": 1944,
+          "imdb_id": "tt0037059"
+        },
+        {
+          "rank": 195,
+          "title": "Mr. Death: The Rise and Fall of Fred A. Leuchter, Jr.",
+          "year": 1999,
+          "imdb_id": "tt0192335"
+        },
+        {
+          "rank": 196,
+          "title": "Ordet",
+          "year": 1955,
+          "imdb_id": "tt0048452"
+        },
+        {
+          "rank": 197,
+          "title": "The Conformist",
+          "year": 1970,
+          "imdb_id": "tt0065571"
+        },
+        {
+          "rank": 198,
+          "title": "Strangers on a Train",
+          "year": 1951,
+          "imdb_id": "tt0044079"
+        },
+        {
+          "rank": 199,
+          "title": "Free Solo",
+          "year": 2018,
+          "imdb_id": "tt7775622"
+        },
+        {
+          "rank": 200,
+          "title": "Ran",
+          "year": 1985,
+          "imdb_id": "tt0089881"
+        },
+        {
+          "rank": 201,
+          "title": "Sing Sing",
+          "year": 2023,
+          "imdb_id": "tt28479262"
+        },
+        {
+          "rank": 202,
+          "title": "Sunrise",
+          "year": 1927,
+          "imdb_id": "tt0018455"
+        },
+        {
+          "rank": 203,
+          "title": "76 Days",
+          "year": 2020,
+          "imdb_id": "tt12801326"
+        },
+        {
+          "rank": 204,
+          "title": "Aladdin",
+          "year": 1992,
+          "imdb_id": "tt0103639"
+        },
+        {
+          "rank": 205,
+          "title": "The Social Network",
+          "year": 2010,
+          "imdb_id": "tt1285016"
+        },
+        {
+          "rank": 206,
+          "title": "In the Heat of the Night",
+          "year": 1967,
+          "imdb_id": "tt0061811"
+        },
+        {
+          "rank": 207,
+          "title": "Eighth Grade",
+          "year": 2018,
+          "imdb_id": "tt7014006"
+        },
+        {
+          "rank": 208,
+          "title": "Late Spring",
+          "year": 1949,
+          "imdb_id": "tt0041154"
+        },
+        {
+          "rank": 209,
+          "title": "Paths of Glory",
+          "year": 1957,
+          "imdb_id": "tt0050825"
+        },
+        {
+          "rank": 210,
+          "title": "Persepolis",
+          "year": 2007,
+          "imdb_id": "tt0808417"
+        },
+        {
+          "rank": 211,
+          "title": "Sullivan's Travels",
+          "year": 1941,
+          "imdb_id": "tt0034240"
+        },
+        {
+          "rank": 212,
+          "title": "For Sama",
+          "year": 2019,
+          "imdb_id": "tt9617456"
+        },
+        {
+          "rank": 213,
+          "title": "Hell or High Water",
+          "year": 2016,
+          "imdb_id": "tt2582782"
+        },
+        {
+          "rank": 214,
+          "title": "Saving Private Ryan",
+          "year": 1998,
+          "imdb_id": "tt0120815"
+        },
+        {
+          "rank": 215,
+          "title": "Monsters, Inc.",
+          "year": 2001,
+          "imdb_id": "tt0198781"
+        },
+        {
+          "rank": 216,
+          "title": "Angels With Dirty Faces",
+          "year": 1938,
+          "imdb_id": "tt0029870"
+        },
+        {
+          "rank": 217,
+          "title": "The Quiet Girl",
+          "year": 2022,
+          "imdb_id": "tt15109082"
+        },
+        {
+          "rank": 218,
+          "title": "The Cameraman",
+          "year": 1928,
+          "imdb_id": "tt0018742"
+        },
+        {
+          "rank": 219,
+          "title": "Sweet Smell of Success",
+          "year": 1957,
+          "imdb_id": "tt0051036"
+        },
+        {
+          "rank": 220,
+          "title": "12 Years a Slave",
+          "year": 2013,
+          "imdb_id": "tt2024544"
+        },
+        {
+          "rank": 221,
+          "title": "King Kong",
+          "year": 1933,
+          "imdb_id": "tt0024216"
+        },
+        {
+          "rank": 222,
+          "title": "L'Atalante",
+          "year": 1934,
+          "imdb_id": "tt0024844"
+        },
+        {
+          "rank": 223,
+          "title": "Day of Wrath",
+          "year": 1943,
+          "imdb_id": "tt0036506"
+        },
+        {
+          "rank": 224,
+          "title": "Captain Blood",
+          "year": 1935,
+          "imdb_id": "tt0026174"
+        },
+        {
+          "rank": 225,
+          "title": "Quai des Orfevres",
+          "year": 1947,
+          "imdb_id": "tt0039739"
+        },
+        {
+          "rank": 226,
+          "title": "Pan's Labyrinth",
+          "year": 2006,
+          "imdb_id": "tt0457430"
+        },
+        {
+          "rank": 227,
+          "title": "A Fistful of Dollars",
+          "year": 1964,
+          "imdb_id": "tt0058461"
+        },
+        {
+          "rank": 228,
+          "title": "The Iron Giant",
+          "year": 1999,
+          "imdb_id": "tt0129167"
+        },
+        {
+          "rank": 229,
+          "title": "Dog Day Afternoon",
+          "year": 1975,
+          "imdb_id": "tt0072890"
+        },
+        {
+          "rank": 230,
+          "title": "The Grapes of Wrath",
+          "year": 1940,
+          "imdb_id": "tt0032551"
+        },
+        {
+          "rank": 231,
+          "title": "The Endless Summer",
+          "year": 1966,
+          "imdb_id": "tt0060371"
+        },
+        {
+          "rank": 232,
+          "title": "Lady Bird",
+          "year": 2017,
+          "imdb_id": "tt4925292"
+        },
+        {
+          "rank": 233,
+          "title": "Halloween",
+          "year": 1978,
+          "imdb_id": "tt0077651"
+        },
+        {
+          "rank": 234,
+          "title": "Unforgiven",
+          "year": 1992,
+          "imdb_id": "tt0105695"
+        },
+        {
+          "rank": 235,
+          "title": "Brooklyn",
+          "year": 2015,
+          "imdb_id": "tt2381111"
+        },
+        {
+          "rank": 236,
+          "title": "Catch Me if You Can",
+          "year": 2002,
+          "imdb_id": "tt0264464"
+        },
+        {
+          "rank": 237,
+          "title": "I Vitelloni",
+          "year": 1953,
+          "imdb_id": "tt0046521"
+        },
+        {
+          "rank": 238,
+          "title": "I Am Not Your Negro",
+          "year": 2016,
+          "imdb_id": "tt5804038"
+        },
+        {
+          "rank": 239,
+          "title": "Memento",
+          "year": 2000,
+          "imdb_id": "tt0209144"
+        },
+        {
+          "rank": 240,
+          "title": "The Insider",
+          "year": 1999,
+          "imdb_id": "tt0140352"
+        },
+        {
+          "rank": 241,
+          "title": "Monster",
+          "year": 2023,
+          "imdb_id": "tt23736044"
+        },
+        {
+          "rank": 242,
+          "title": "The Thin Man",
+          "year": 1934,
+          "imdb_id": "tt0025878"
+        },
+        {
+          "rank": 243,
+          "title": "Love and Death",
+          "year": 1975,
+          "imdb_id": "tt0073312"
+        },
+        {
+          "rank": 244,
+          "title": "La Haine",
+          "year": 1995,
+          "imdb_id": "tt0113247"
+        },
+        {
+          "rank": 245,
+          "title": "Forbidden Games",
+          "year": 1952,
+          "imdb_id": "tt0043686"
+        },
+        {
+          "rank": 246,
+          "title": "The Lost Weekend",
+          "year": 1945,
+          "imdb_id": "tt0037884"
+        },
+        {
+          "rank": 247,
+          "title": "The Killers",
+          "year": 1946,
+          "imdb_id": "tt0038669"
+        },
+        {
+          "rank": 248,
+          "title": "Star Trek",
+          "year": 2009,
+          "imdb_id": "tt0796366"
+        },
+        {
+          "rank": 249,
+          "title": "The Fallen Idol",
+          "year": 1948,
+          "imdb_id": "tt0040338"
+        },
+        {
+          "rank": 250,
+          "title": "Jalsaghar",
+          "year": 1960,
+          "imdb_id": "tt0051792"
+        },
+        {
+          "rank": 251,
+          "title": "Black Narcissus",
+          "year": 1947,
+          "imdb_id": "tt0039192"
+        },
+        {
+          "rank": 252,
+          "title": "Ratatouille",
+          "year": 2007,
+          "imdb_id": "tt0382932"
+        },
+        {
+          "rank": 253,
+          "title": "Maria Full of Grace",
+          "year": 2004,
+          "imdb_id": "tt0390221"
+        },
+        {
+          "rank": 254,
+          "title": "Life of Brian",
+          "year": 1979,
+          "imdb_id": "tt0079470"
+        },
+        {
+          "rank": 255,
+          "title": "Holiday",
+          "year": 1938,
+          "imdb_id": "tt0030241"
+        },
+        {
+          "rank": 256,
+          "title": "Guillermo del Toro's Pinocchio",
+          "year": 2022,
+          "imdb_id": "tt1488589"
+        },
+        {
+          "rank": 257,
+          "title": "Whiplash",
+          "year": 2014,
+          "imdb_id": "tt2582802"
+        },
+        {
+          "rank": 258,
+          "title": "Battleship Potemkin",
+          "year": 1925,
+          "imdb_id": "tt0015648"
+        },
+        {
+          "rank": 259,
+          "title": "Make Way for Tomorrow",
+          "year": 1937,
+          "imdb_id": "tt0029192"
+        },
+        {
+          "rank": 260,
+          "title": "Quiz Show",
+          "year": 1994,
+          "imdb_id": "tt0110932"
+        },
+        {
+          "rank": 261,
+          "title": "Salesman",
+          "year": 1969,
+          "imdb_id": "tt0064921"
+        },
+        {
+          "rank": 262,
+          "title": "Spider-Man: No Way Home",
+          "year": 2021,
+          "imdb_id": "tt10872600"
+        },
+        {
+          "rank": 263,
+          "title": "WALL-E",
+          "year": 2008,
+          "imdb_id": "tt0910970"
+        },
+        {
+          "rank": 264,
+          "title": "The Princess Bride",
+          "year": 1987,
+          "imdb_id": "tt0093779"
+        },
+        {
+          "rank": 265,
+          "title": "The Farewell",
+          "year": 2019,
+          "imdb_id": "tt8637428"
+        },
+        {
+          "rank": 266,
+          "title": "Simon of the Desert",
+          "year": 1965,
+          "imdb_id": "tt0059719"
+        },
+        {
+          "rank": 267,
+          "title": "Grand Illusion",
+          "year": 1937,
+          "imdb_id": "tt0028950"
+        },
+        {
+          "rank": 268,
+          "title": "Suzume",
+          "year": 2022,
+          "imdb_id": "tt16428256"
+        },
+        {
+          "rank": 269,
+          "title": "Au Hasard Balthazar",
+          "year": 1966,
+          "imdb_id": "tt0060138"
+        },
+        {
+          "rank": 270,
+          "title": "Umberto D",
+          "year": 1952,
+          "imdb_id": "tt0045274"
+        },
+        {
+          "rank": 271,
+          "title": "A Night to Remember",
+          "year": 1958,
+          "imdb_id": "tt0051994"
+        },
+        {
+          "rank": 272,
+          "title": "The Handmaiden",
+          "year": 2016,
+          "imdb_id": "tt4016934"
+        },
+        {
+          "rank": 273,
+          "title": "The Band's Visit",
+          "year": 2007,
+          "imdb_id": "tt1032856"
+        },
+        {
+          "rank": 274,
+          "title": "The Mitchells vs. the Machines",
+          "year": 2021,
+          "imdb_id": "tt7979580"
+        },
+        {
+          "rank": 275,
+          "title": "Touch of Evil",
+          "year": 1958,
+          "imdb_id": "tt0052311"
+        },
+        {
+          "rank": 276,
+          "title": "Star Wars: Episode V - The Empire Strikes Back",
+          "year": 1980,
+          "imdb_id": "tt0080684"
+        },
+        {
+          "rank": 277,
+          "title": "Stray Dog",
+          "year": 1949,
+          "imdb_id": "tt0041699"
+        },
+        {
+          "rank": 278,
+          "title": "Once Upon a Time in the West",
+          "year": 1968,
+          "imdb_id": "tt0064116"
+        },
+        {
+          "rank": 279,
+          "title": "The Discreet Charm of the Bourgeoisie",
+          "year": 1972,
+          "imdb_id": "tt0068361"
+        },
+        {
+          "rank": 280,
+          "title": "BPM (Beats Per Minute)",
+          "year": 2017,
+          "imdb_id": "tt6135348"
+        },
+        {
+          "rank": 281,
+          "title": "The King's Speech",
+          "year": 2010,
+          "imdb_id": "tt1504320"
+        },
+        {
+          "rank": 282,
+          "title": "Brazil",
+          "year": 1985,
+          "imdb_id": "tt0088846"
+        },
+        {
+          "rank": 283,
+          "title": "Local Hero",
+          "year": 1983,
+          "imdb_id": "tt0085859"
+        },
+        {
+          "rank": 284,
+          "title": "The Red Circle",
+          "year": 1970,
+          "imdb_id": "tt0065531"
+        },
+        {
+          "rank": 285,
+          "title": "I Was Born, But ...",
+          "year": 1932,
+          "imdb_id": "tt0023634"
+        },
+        {
+          "rank": 286,
+          "title": "Pulp Fiction",
+          "year": 1994,
+          "imdb_id": "tt0110912"
+        },
+        {
+          "rank": 287,
+          "title": "The French Connection",
+          "year": 1971,
+          "imdb_id": "tt0067116"
+        },
+        {
+          "rank": 288,
+          "title": "Robot Dreams",
+          "year": 2023,
+          "imdb_id": "tt13429870"
+        },
+        {
+          "rank": 289,
+          "title": "Aliens",
+          "year": 1986,
+          "imdb_id": "tt0090605"
+        },
+        {
+          "rank": 290,
+          "title": "Yojimbo",
+          "year": 1961,
+          "imdb_id": "tt0055630"
+        },
+        {
+          "rank": 291,
+          "title": "Playtime",
+          "year": 1967,
+          "imdb_id": "tt0062136"
+        },
+        {
+          "rank": 292,
+          "title": "My Left Foot",
+          "year": 1989,
+          "imdb_id": "tt0097937"
+        },
+        {
+          "rank": 293,
+          "title": "8 1/2",
+          "year": 1963,
+          "imdb_id": "tt0056801"
+        },
+        {
+          "rank": 294,
+          "title": "Sling Blade",
+          "year": 1996,
+          "imdb_id": "tt0117666"
+        },
+        {
+          "rank": 295,
+          "title": "God's Own Country",
+          "year": 2017,
+          "imdb_id": "tt5635086"
+        },
+        {
+          "rank": 296,
+          "title": "Eternal Sunshine of the Spotless Mind",
+          "year": 2004,
+          "imdb_id": "tt0338013"
+        },
+        {
+          "rank": 297,
+          "title": "Dolemite Is My Name",
+          "year": 2019,
+          "imdb_id": "tt8526872"
+        },
+        {
+          "rank": 298,
+          "title": "The Ladykillers",
+          "year": 1955,
+          "imdb_id": "tt0048281"
+        },
+        {
+          "rank": 299,
+          "title": "Leave No Trace",
+          "year": 2018,
+          "imdb_id": "tt3892172"
+        },
+        {
+          "rank": 300,
+          "title": "One Flew Over the Cuckoo's Nest",
+          "year": 1975,
+          "imdb_id": "tt0073486"
+        }
+      ]
+    },
+    "imdb250": {
+      "name": "IMDb Top 250",
+      "short": "IMDb Top 250",
+      "url": "https://www.imdb.com/chart/top/",
+      "source_note": "IMDb Top 250 chart as of 2026-10-21, with ranks, titles, years and ids read straight from the chart page's own data (opened in a browser because direct fetches were blocked). The chart changes daily.",
+      "films": [
+        {
+          "rank": 1,
+          "title": "The Shawshank Redemption",
+          "year": 1994,
+          "imdb_id": "tt0111161"
+        },
+        {
+          "rank": 2,
+          "title": "The Godfather",
+          "year": 1972,
+          "imdb_id": "tt0068646"
+        },
+        {
+          "rank": 3,
+          "title": "The Dark Knight",
+          "year": 2008,
+          "imdb_id": "tt0468569"
+        },
+        {
+          "rank": 4,
+          "title": "The Godfather Part II",
+          "year": 1974,
+          "imdb_id": "tt0071562"
+        },
+        {
+          "rank": 5,
+          "title": "The Lord of the Rings: The Return of the King",
+          "year": 2003,
+          "imdb_id": "tt0167260"
+        },
+        {
+          "rank": 6,
+          "title": "12 Angry Men",
+          "year": 1957,
+          "imdb_id": "tt0050083"
+        },
+        {
+          "rank": 7,
+          "title": "Schindler's List",
+          "year": 1993,
+          "imdb_id": "tt0108052"
+        },
+        {
+          "rank": 8,
+          "title": "The Lord of the Rings: The Fellowship of the Ring",
+          "year": 2001,
+          "imdb_id": "tt0120737"
+        },
+        {
+          "rank": 9,
+          "title": "Pulp Fiction",
+          "year": 1994,
+          "imdb_id": "tt0110912"
+        },
+        {
+          "rank": 10,
+          "title": "The Lord of the Rings: The Two Towers",
+          "year": 2002,
+          "imdb_id": "tt0167261"
+        },
+        {
+          "rank": 11,
+          "title": "The Good, the Bad and the Ugly",
+          "year": 1966,
+          "imdb_id": "tt0060196"
+        },
+        {
+          "rank": 12,
+          "title": "Forrest Gump",
+          "year": 1994,
+          "imdb_id": "tt0109830"
+        },
+        {
+          "rank": 13,
+          "title": "Inception",
+          "year": 2010,
+          "imdb_id": "tt1375666"
+        },
+        {
+          "rank": 14,
+          "title": "Fight Club",
+          "year": 1999,
+          "imdb_id": "tt0137523"
+        },
+        {
+          "rank": 15,
+          "title": "Star Wars: Episode V - The Empire Strikes Back",
+          "year": 1980,
+          "imdb_id": "tt0080684"
+        },
+        {
+          "rank": 16,
+          "title": "The Matrix",
+          "year": 1999,
+          "imdb_id": "tt0133093"
+        },
+        {
+          "rank": 17,
+          "title": "Interstellar",
+          "year": 2014,
+          "imdb_id": "tt0816692"
+        },
+        {
+          "rank": 18,
+          "title": "GoodFellas",
+          "year": 1990,
+          "imdb_id": "tt0099685"
+        },
+        {
+          "rank": 19,
+          "title": "One Flew Over the Cuckoo's Nest",
+          "year": 1975,
+          "imdb_id": "tt0073486"
+        },
+        {
+          "rank": 20,
+          "title": "Seven",
+          "year": 1995,
+          "imdb_id": "tt0114369"
+        },
+        {
+          "rank": 21,
+          "title": "It's a Wonderful Life",
+          "year": 1946,
+          "imdb_id": "tt0038650"
+        },
+        {
+          "rank": 22,
+          "title": "The Silence of the Lambs",
+          "year": 1991,
+          "imdb_id": "tt0102926"
+        },
+        {
+          "rank": 23,
+          "title": "Saving Private Ryan",
+          "year": 1998,
+          "imdb_id": "tt0120815"
+        },
+        {
+          "rank": 24,
+          "title": "Seven Samurai",
+          "year": 1954,
+          "imdb_id": "tt0047478"
+        },
+        {
+          "rank": 25,
+          "title": "The Green Mile",
+          "year": 1999,
+          "imdb_id": "tt0120689"
+        },
+        {
+          "rank": 26,
+          "title": "City of God",
+          "year": 2002,
+          "imdb_id": "tt0317248"
+        },
+        {
+          "rank": 27,
+          "title": "Life Is Beautiful",
+          "year": 1997,
+          "imdb_id": "tt0118799"
+        },
+        {
+          "rank": 28,
+          "title": "Terminator 2: Judgment Day",
+          "year": 1991,
+          "imdb_id": "tt0103064"
+        },
+        {
+          "rank": 29,
+          "title": "Back to the Future",
+          "year": 1985,
+          "imdb_id": "tt0088763"
+        },
+        {
+          "rank": 30,
+          "title": "Star Wars: Episode IV - A New Hope",
+          "year": 1977,
+          "imdb_id": "tt0076759"
+        },
+        {
+          "rank": 31,
+          "title": "Spirited Away",
+          "year": 2001,
+          "imdb_id": "tt0245429"
+        },
+        {
+          "rank": 32,
+          "title": "Gladiator",
+          "year": 2000,
+          "imdb_id": "tt0172495"
+        },
+        {
+          "rank": 33,
+          "title": "The Pianist",
+          "year": 2002,
+          "imdb_id": "tt0253474"
+        },
+        {
+          "rank": 34,
+          "title": "Kill Bill: The Whole Bloody Affair",
+          "year": 2004,
+          "imdb_id": "tt6019206"
+        },
+        {
+          "rank": 35,
+          "title": "Parasite",
+          "year": 2019,
+          "imdb_id": "tt6751668"
+        },
+        {
+          "rank": 36,
+          "title": "Grave of the Fireflies",
+          "year": 1988,
+          "imdb_id": "tt0095327"
+        },
+        {
+          "rank": 37,
+          "title": "Harakiri",
+          "year": 1962,
+          "imdb_id": "tt0056058"
+        },
+        {
+          "rank": 38,
+          "title": "The Lion King",
+          "year": 1994,
+          "imdb_id": "tt0110357"
+        },
+        {
+          "rank": 39,
+          "title": "Psycho",
+          "year": 1960,
+          "imdb_id": "tt0054215"
+        },
+        {
+          "rank": 40,
+          "title": "The Departed",
+          "year": 2006,
+          "imdb_id": "tt0407887"
+        },
+        {
+          "rank": 41,
+          "title": "Whiplash",
+          "year": 2014,
+          "imdb_id": "tt2582802"
+        },
+        {
+          "rank": 42,
+          "title": "The Prestige",
+          "year": 2006,
+          "imdb_id": "tt0482571"
+        },
+        {
+          "rank": 43,
+          "title": "American History X",
+          "year": 1998,
+          "imdb_id": "tt0120586"
+        },
+        {
+          "rank": 44,
+          "title": "Spider-Man: Across the Spider-Verse",
+          "year": 2023,
+          "imdb_id": "tt9362722"
+        },
+        {
+          "rank": 45,
+          "title": "Cinema Paradiso",
+          "year": 1988,
+          "imdb_id": "tt0095765"
+        },
+        {
+          "rank": 46,
+          "title": "Léon: The Professional",
+          "year": 1994,
+          "imdb_id": "tt0110413"
+        },
+        {
+          "rank": 47,
+          "title": "Casablanca",
+          "year": 1942,
+          "imdb_id": "tt0034583"
+        },
+        {
+          "rank": 48,
+          "title": "The Intouchables",
+          "year": 2011,
+          "imdb_id": "tt1675434"
+        },
+        {
+          "rank": 49,
+          "title": "The Usual Suspects",
+          "year": 1995,
+          "imdb_id": "tt0114814"
+        },
+        {
+          "rank": 50,
+          "title": "Django Unchained",
+          "year": 2012,
+          "imdb_id": "tt1853728"
+        },
+        {
+          "rank": 51,
+          "title": "Alien",
+          "year": 1979,
+          "imdb_id": "tt0078748"
+        },
+        {
+          "rank": 52,
+          "title": "Rear Window",
+          "year": 1954,
+          "imdb_id": "tt0047396"
+        },
+        {
+          "rank": 53,
+          "title": "Modern Times",
+          "year": 1936,
+          "imdb_id": "tt0027977"
+        },
+        {
+          "rank": 54,
+          "title": "Once Upon a Time in the West",
+          "year": 1968,
+          "imdb_id": "tt0064116"
+        },
+        {
+          "rank": 55,
+          "title": "WALL·E",
+          "year": 2008,
+          "imdb_id": "tt0910970"
+        },
+        {
+          "rank": 56,
+          "title": "City Lights",
+          "year": 1931,
+          "imdb_id": "tt0021749"
+        },
+        {
+          "rank": 57,
+          "title": "Apocalypse Now",
+          "year": 1979,
+          "imdb_id": "tt0078788"
+        },
+        {
+          "rank": 58,
+          "title": "Memento",
+          "year": 2000,
+          "imdb_id": "tt0209144"
+        },
+        {
+          "rank": 59,
+          "title": "Avengers: Infinity War",
+          "year": 2018,
+          "imdb_id": "tt4154756"
+        },
+        {
+          "rank": 60,
+          "title": "Dune: Part Two",
+          "year": 2024,
+          "imdb_id": "tt15239678"
+        },
+        {
+          "rank": 61,
+          "title": "Raiders of the Lost Ark",
+          "year": 1981,
+          "imdb_id": "tt0082971"
+        },
+        {
+          "rank": 62,
+          "title": "Spider-Man: Into the Spider-Verse",
+          "year": 2018,
+          "imdb_id": "tt4633694"
+        },
+        {
+          "rank": 63,
+          "title": "The Lives of Others",
+          "year": 2006,
+          "imdb_id": "tt0405094"
+        },
+        {
+          "rank": 64,
+          "title": "The Odyssey",
+          "year": 2026,
+          "imdb_id": "tt33764258"
+        },
+        {
+          "rank": 65,
+          "title": "Sunset Boulevard",
+          "year": 1950,
+          "imdb_id": "tt0043014"
+        },
+        {
+          "rank": 66,
+          "title": "Witness for the Prosecution",
+          "year": 1957,
+          "imdb_id": "tt0051201"
+        },
+        {
+          "rank": 67,
+          "title": "Paths of Glory",
+          "year": 1957,
+          "imdb_id": "tt0050825"
+        },
+        {
+          "rank": 68,
+          "title": "Inglourious Basterds",
+          "year": 2009,
+          "imdb_id": "tt0361748"
+        },
+        {
+          "rank": 69,
+          "title": "The Shining",
+          "year": 1980,
+          "imdb_id": "tt0081505"
+        },
+        {
+          "rank": 70,
+          "title": "The Great Dictator",
+          "year": 1940,
+          "imdb_id": "tt0032553"
+        },
+        {
+          "rank": 71,
+          "title": "Aliens",
+          "year": 1986,
+          "imdb_id": "tt0090605"
+        },
+        {
+          "rank": 72,
+          "title": "High and Low",
+          "year": 1963,
+          "imdb_id": "tt0057565"
+        },
+        {
+          "rank": 73,
+          "title": "12th Fail",
+          "year": 2023,
+          "imdb_id": "tt23849204"
+        },
+        {
+          "rank": 74,
+          "title": "Avengers: Endgame",
+          "year": 2019,
+          "imdb_id": "tt4154796"
+        },
+        {
+          "rank": 75,
+          "title": "Good Will Hunting",
+          "year": 1997,
+          "imdb_id": "tt0119217"
+        },
+        {
+          "rank": 76,
+          "title": "Coco",
+          "year": 2017,
+          "imdb_id": "tt2380307"
+        },
+        {
+          "rank": 77,
+          "title": "Toy Story",
+          "year": 1995,
+          "imdb_id": "tt0114709"
+        },
+        {
+          "rank": 78,
+          "title": "The Dark Knight Rises",
+          "year": 2012,
+          "imdb_id": "tt1345836"
+        },
+        {
+          "rank": 79,
+          "title": "Amadeus",
+          "year": 1984,
+          "imdb_id": "tt0086879"
+        },
+        {
+          "rank": 80,
+          "title": "Your Name.",
+          "year": 2016,
+          "imdb_id": "tt5311514"
+        },
+        {
+          "rank": 81,
+          "title": "3 Idiots",
+          "year": 2009,
+          "imdb_id": "tt1187043"
+        },
+        {
+          "rank": 82,
+          "title": "Braveheart",
+          "year": 1995,
+          "imdb_id": "tt0112573"
+        },
+        {
+          "rank": 83,
+          "title": "Das Boot",
+          "year": 1981,
+          "imdb_id": "tt0082096"
+        },
+        {
+          "rank": 84,
+          "title": "Princess Mononoke",
+          "year": 1997,
+          "imdb_id": "tt0119698"
+        },
+        {
+          "rank": 85,
+          "title": "Oldboy",
+          "year": 2003,
+          "imdb_id": "tt0364569"
+        },
+        {
+          "rank": 86,
+          "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+          "year": 1964,
+          "imdb_id": "tt0057012"
+        },
+        {
+          "rank": 87,
+          "title": "American Beauty",
+          "year": 1999,
+          "imdb_id": "tt0169547"
+        },
+        {
+          "rank": 88,
+          "title": "Capernaum",
+          "year": 2018,
+          "imdb_id": "tt8267604"
+        },
+        {
+          "rank": 89,
+          "title": "Attack on Titan: The Last Attack",
+          "year": 2024,
+          "imdb_id": "tt33175825"
+        },
+        {
+          "rank": 90,
+          "title": "Singin' in the Rain",
+          "year": 1952,
+          "imdb_id": "tt0045152"
+        },
+        {
+          "rank": 91,
+          "title": "Once Upon a Time in America",
+          "year": 1984,
+          "imdb_id": "tt0087843"
+        },
+        {
+          "rank": 92,
+          "title": "Joker",
+          "year": 2019,
+          "imdb_id": "tt7286456"
+        },
+        {
+          "rank": 93,
+          "title": "Toy Story 3",
+          "year": 2010,
+          "imdb_id": "tt0435761"
+        },
+        {
+          "rank": 94,
+          "title": "Star Wars: Episode VI - Return of the Jedi",
+          "year": 1983,
+          "imdb_id": "tt0086190"
+        },
+        {
+          "rank": 95,
+          "title": "Come and See",
+          "year": 1985,
+          "imdb_id": "tt0091251"
+        },
+        {
+          "rank": 96,
+          "title": "Requiem for a Dream",
+          "year": 2000,
+          "imdb_id": "tt0180093"
+        },
+        {
+          "rank": 97,
+          "title": "Incendies",
+          "year": 2010,
+          "imdb_id": "tt1255953"
+        },
+        {
+          "rank": 98,
+          "title": "Ikiru",
+          "year": 1952,
+          "imdb_id": "tt0044741"
+        },
+        {
+          "rank": 99,
+          "title": "The Hunt",
+          "year": 2012,
+          "imdb_id": "tt2106476"
+        },
+        {
+          "rank": 100,
+          "title": "Eternal Sunshine of the Spotless Mind",
+          "year": 2004,
+          "imdb_id": "tt0338013"
+        },
+        {
+          "rank": 101,
+          "title": "The Apartment",
+          "year": 1960,
+          "imdb_id": "tt0053604"
+        },
+        {
+          "rank": 102,
+          "title": "Lawrence of Arabia",
+          "year": 1962,
+          "imdb_id": "tt0056172"
+        },
+        {
+          "rank": 103,
+          "title": "Heat",
+          "year": 1995,
+          "imdb_id": "tt0113277"
+        },
+        {
+          "rank": 104,
+          "title": "Scarface",
+          "year": 1983,
+          "imdb_id": "tt0086250"
+        },
+        {
+          "rank": 105,
+          "title": "Up",
+          "year": 2009,
+          "imdb_id": "tt1049413"
+        },
+        {
+          "rank": 106,
+          "title": "Reservoir Dogs",
+          "year": 1992,
+          "imdb_id": "tt0105236"
+        },
+        {
+          "rank": 107,
+          "title": "2001: A Space Odyssey",
+          "year": 1968,
+          "imdb_id": "tt0062622"
+        },
+        {
+          "rank": 108,
+          "title": "Double Indemnity",
+          "year": 1944,
+          "imdb_id": "tt0036775"
+        },
+        {
+          "rank": 109,
+          "title": "Like Stars on Earth",
+          "year": 2007,
+          "imdb_id": "tt0986264"
+        },
+        {
+          "rank": 110,
+          "title": "North by Northwest",
+          "year": 1959,
+          "imdb_id": "tt0053125"
+        },
+        {
+          "rank": 111,
+          "title": "Full Metal Jacket",
+          "year": 1987,
+          "imdb_id": "tt0093058"
+        },
+        {
+          "rank": 112,
+          "title": "A Separation",
+          "year": 2011,
+          "imdb_id": "tt1832382"
+        },
+        {
+          "rank": 113,
+          "title": "I Swear",
+          "year": 2025,
+          "imdb_id": "tt31514146"
+        },
+        {
+          "rank": 114,
+          "title": "Die Hard",
+          "year": 1988,
+          "imdb_id": "tt0095016"
+        },
+        {
+          "rank": 115,
+          "title": "M",
+          "year": 1931,
+          "imdb_id": "tt0022100"
+        },
+        {
+          "rank": 116,
+          "title": "Amélie",
+          "year": 2001,
+          "imdb_id": "tt0211915"
+        },
+        {
+          "rank": 117,
+          "title": "Indiana Jones and the Last Crusade",
+          "year": 1989,
+          "imdb_id": "tt0097576"
+        },
+        {
+          "rank": 118,
+          "title": "To Kill a Mockingbird",
+          "year": 1962,
+          "imdb_id": "tt0056592"
+        },
+        {
+          "rank": 119,
+          "title": "Vertigo",
+          "year": 1958,
+          "imdb_id": "tt0052357"
+        },
+        {
+          "rank": 120,
+          "title": "Citizen Kane",
+          "year": 1941,
+          "imdb_id": "tt0033467"
+        },
+        {
+          "rank": 121,
+          "title": "The Sting",
+          "year": 1973,
+          "imdb_id": "tt0070735"
+        },
+        {
+          "rank": 122,
+          "title": "A Clockwork Orange",
+          "year": 1971,
+          "imdb_id": "tt0066921"
+        },
+        {
+          "rank": 123,
+          "title": "The Truman Show",
+          "year": 1998,
+          "imdb_id": "tt0120382"
+        },
+        {
+          "rank": 124,
+          "title": "Metropolis",
+          "year": 1927,
+          "imdb_id": "tt0017136"
+        },
+        {
+          "rank": 125,
+          "title": "The Wolf of Wall Street",
+          "year": 2013,
+          "imdb_id": "tt0993846"
+        },
+        {
+          "rank": 126,
+          "title": "1917",
+          "year": 2019,
+          "imdb_id": "tt8579674"
+        },
+        {
+          "rank": 127,
+          "title": "Snatch",
+          "year": 2000,
+          "imdb_id": "tt0208092"
+        },
+        {
+          "rank": 128,
+          "title": "Shutter Island",
+          "year": 2010,
+          "imdb_id": "tt1130884"
+        },
+        {
+          "rank": 129,
+          "title": "Downfall",
+          "year": 2004,
+          "imdb_id": "tt0363163"
+        },
+        {
+          "rank": 130,
+          "title": "L.A. Confidential",
+          "year": 1997,
+          "imdb_id": "tt0119488"
+        },
+        {
+          "rank": 131,
+          "title": "Green Book",
+          "year": 2018,
+          "imdb_id": "tt6966692"
+        },
+        {
+          "rank": 132,
+          "title": "Dangal",
+          "year": 2016,
+          "imdb_id": "tt5074352"
+        },
+        {
+          "rank": 133,
+          "title": "Bicycle Thieves",
+          "year": 1948,
+          "imdb_id": "tt0040522"
+        },
+        {
+          "rank": 134,
+          "title": "Judgment at Nuremberg",
+          "year": 1961,
+          "imdb_id": "tt0055031"
+        },
+        {
+          "rank": 135,
+          "title": "Woman in the Dunes",
+          "year": 1964,
+          "imdb_id": "tt0058625"
+        },
+        {
+          "rank": 136,
+          "title": "Jurassic Park",
+          "year": 1993,
+          "imdb_id": "tt0107290"
+        },
+        {
+          "rank": 137,
+          "title": "Batman Begins",
+          "year": 2005,
+          "imdb_id": "tt0372784"
+        },
+        {
+          "rank": 138,
+          "title": "Oppenheimer",
+          "year": 2023,
+          "imdb_id": "tt15398776"
+        },
+        {
+          "rank": 139,
+          "title": "For a Few Dollars More",
+          "year": 1965,
+          "imdb_id": "tt0059578"
+        },
+        {
+          "rank": 140,
+          "title": "Hamilton",
+          "year": 2020,
+          "imdb_id": "tt8503618"
+        },
+        {
+          "rank": 141,
+          "title": "There Will Be Blood",
+          "year": 2007,
+          "imdb_id": "tt0469494"
+        },
+        {
+          "rank": 142,
+          "title": "Some Like It Hot",
+          "year": 1959,
+          "imdb_id": "tt0053291"
+        },
+        {
+          "rank": 143,
+          "title": "Taxi Driver",
+          "year": 1976,
+          "imdb_id": "tt0075314"
+        },
+        {
+          "rank": 144,
+          "title": "The Father",
+          "year": 2020,
+          "imdb_id": "tt10272386"
+        },
+        {
+          "rank": 145,
+          "title": "The Sixth Sense",
+          "year": 1999,
+          "imdb_id": "tt0167404"
+        },
+        {
+          "rank": 146,
+          "title": "The Kid",
+          "year": 1921,
+          "imdb_id": "tt0012349"
+        },
+        {
+          "rank": 147,
+          "title": "All About Eve",
+          "year": 1950,
+          "imdb_id": "tt0042192"
+        },
+        {
+          "rank": 148,
+          "title": "Ran",
+          "year": 1985,
+          "imdb_id": "tt0089881"
+        },
+        {
+          "rank": 149,
+          "title": "The Thing",
+          "year": 1982,
+          "imdb_id": "tt0084787"
+        },
+        {
+          "rank": 150,
+          "title": "Casino",
+          "year": 1995,
+          "imdb_id": "tt0112641"
+        },
+        {
+          "rank": 151,
+          "title": "No Country for Old Men",
+          "year": 2007,
+          "imdb_id": "tt0477348"
+        },
+        {
+          "rank": 152,
+          "title": "Prisoners",
+          "year": 2013,
+          "imdb_id": "tt1392214"
+        },
+        {
+          "rank": 153,
+          "title": "Top Gun: Maverick",
+          "year": 2022,
+          "imdb_id": "tt1745960"
+        },
+        {
+          "rank": 154,
+          "title": "Kill Bill: Vol. 1",
+          "year": 2003,
+          "imdb_id": "tt0266697"
+        },
+        {
+          "rank": 155,
+          "title": "Pan's Labyrinth",
+          "year": 2006,
+          "imdb_id": "tt0457430"
+        },
+        {
+          "rank": 156,
+          "title": "Unforgiven",
+          "year": 1992,
+          "imdb_id": "tt0105695"
+        },
+        {
+          "rank": 157,
+          "title": "A Beautiful Mind",
+          "year": 2001,
+          "imdb_id": "tt0268978"
+        },
+        {
+          "rank": 158,
+          "title": "Howl's Moving Castle",
+          "year": 2004,
+          "imdb_id": "tt0347149"
+        },
+        {
+          "rank": 159,
+          "title": "The Treasure of the Sierra Madre",
+          "year": 1948,
+          "imdb_id": "tt0040897"
+        },
+        {
+          "rank": 160,
+          "title": "Finding Nemo",
+          "year": 2003,
+          "imdb_id": "tt0266543"
+        },
+        {
+          "rank": 161,
+          "title": "Klaus",
+          "year": 2019,
+          "imdb_id": "tt4729430"
+        },
+        {
+          "rank": 162,
+          "title": "Project Hail Mary",
+          "year": 2026,
+          "imdb_id": "tt12042730"
+        },
+        {
+          "rank": 163,
+          "title": "Demon Slayer: Kimetsu No Yaiba Infinity Castle",
+          "year": 2025,
+          "imdb_id": "tt32820897"
+        },
+        {
+          "rank": 164,
+          "title": "Yojimbo",
+          "year": 1961,
+          "imdb_id": "tt0055630"
+        },
+        {
+          "rank": 165,
+          "title": "The Elephant Man",
+          "year": 1980,
+          "imdb_id": "tt0080678"
+        },
+        {
+          "rank": 166,
+          "title": "The Great Escape",
+          "year": 1963,
+          "imdb_id": "tt0057115"
+        },
+        {
+          "rank": 167,
+          "title": "Monty Python and the Holy Grail",
+          "year": 1975,
+          "imdb_id": "tt0071853"
+        },
+        {
+          "rank": 168,
+          "title": "Dial M for Murder",
+          "year": 1954,
+          "imdb_id": "tt0046912"
+        },
+        {
+          "rank": 169,
+          "title": "The Secret in Their Eyes",
+          "year": 2009,
+          "imdb_id": "tt1305806"
+        },
+        {
+          "rank": 170,
+          "title": "Gone with the Wind",
+          "year": 1939,
+          "imdb_id": "tt0031381"
+        },
+        {
+          "rank": 171,
+          "title": "Lock, Stock and Two Smoking Barrels",
+          "year": 1998,
+          "imdb_id": "tt0120735"
+        },
+        {
+          "rank": 172,
+          "title": "Catch Me If You Can",
+          "year": 2002,
+          "imdb_id": "tt0264464"
+        },
+        {
+          "rank": 173,
+          "title": "Chinatown",
+          "year": 1974,
+          "imdb_id": "tt0071315"
+        },
+        {
+          "rank": 174,
+          "title": "V for Vendetta",
+          "year": 2005,
+          "imdb_id": "tt0434409"
+        },
+        {
+          "rank": 175,
+          "title": "Dead Poets Society",
+          "year": 1989,
+          "imdb_id": "tt0097165"
+        },
+        {
+          "rank": 176,
+          "title": "Inside Out",
+          "year": 2015,
+          "imdb_id": "tt2096673"
+        },
+        {
+          "rank": 177,
+          "title": "The Best of Youth",
+          "year": 2003,
+          "imdb_id": "tt0346336"
+        },
+        {
+          "rank": 178,
+          "title": "Trainspotting",
+          "year": 1996,
+          "imdb_id": "tt0117951"
+        },
+        {
+          "rank": 179,
+          "title": "Harry Potter and the Deathly Hallows: Part 2",
+          "year": 2011,
+          "imdb_id": "tt1201607"
+        },
+        {
+          "rank": 180,
+          "title": "Three Billboards Outside Ebbing, Missouri",
+          "year": 2017,
+          "imdb_id": "tt5027774"
+        },
+        {
+          "rank": 181,
+          "title": "The Bridge on the River Kwai",
+          "year": 1957,
+          "imdb_id": "tt0050212"
+        },
+        {
+          "rank": 182,
+          "title": "Rashomon",
+          "year": 1950,
+          "imdb_id": "tt0042876"
+        },
+        {
+          "rank": 183,
+          "title": "Barry Lyndon",
+          "year": 1975,
+          "imdb_id": "tt0072684"
+        },
+        {
+          "rank": 184,
+          "title": "Ben-Hur",
+          "year": 1959,
+          "imdb_id": "tt0052618"
+        },
+        {
+          "rank": 185,
+          "title": "The Wild Robot",
+          "year": 2024,
+          "imdb_id": "tt29623480"
+        },
+        {
+          "rank": 186,
+          "title": "Hacksaw Ridge",
+          "year": 2016,
+          "imdb_id": "tt2119532"
+        },
+        {
+          "rank": 187,
+          "title": "Warrior",
+          "year": 2011,
+          "imdb_id": "tt1291584"
+        },
+        {
+          "rank": 188,
+          "title": "Ratatouille",
+          "year": 2007,
+          "imdb_id": "tt0382932"
+        },
+        {
+          "rank": 189,
+          "title": "Mad Max: Fury Road",
+          "year": 2015,
+          "imdb_id": "tt1392190"
+        },
+        {
+          "rank": 190,
+          "title": "Million Dollar Baby",
+          "year": 2004,
+          "imdb_id": "tt0405159"
+        },
+        {
+          "rank": 191,
+          "title": "Fargo",
+          "year": 1996,
+          "imdb_id": "tt0116282"
+        },
+        {
+          "rank": 192,
+          "title": "Children of Heaven",
+          "year": 1997,
+          "imdb_id": "tt0118849"
+        },
+        {
+          "rank": 193,
+          "title": "My Neighbor Totoro",
+          "year": 1988,
+          "imdb_id": "tt0096283"
+        },
+        {
+          "rank": 194,
+          "title": "Gran Torino",
+          "year": 2008,
+          "imdb_id": "tt1205489"
+        },
+        {
+          "rank": 195,
+          "title": "12 Years a Slave",
+          "year": 2013,
+          "imdb_id": "tt2024544"
+        },
+        {
+          "rank": 196,
+          "title": "Raging Bull",
+          "year": 1980,
+          "imdb_id": "tt0081398"
+        },
+        {
+          "rank": 197,
+          "title": "How to Train Your Dragon",
+          "year": 2010,
+          "imdb_id": "tt0892769"
+        },
+        {
+          "rank": 198,
+          "title": "Memories of Murder",
+          "year": 2003,
+          "imdb_id": "tt0353969"
+        },
+        {
+          "rank": 199,
+          "title": "The Grand Budapest Hotel",
+          "year": 2014,
+          "imdb_id": "tt2278388"
+        },
+        {
+          "rank": 200,
+          "title": "Before Sunrise",
+          "year": 1995,
+          "imdb_id": "tt0112471"
+        },
+        {
+          "rank": 201,
+          "title": "Monsters, Inc.",
+          "year": 2001,
+          "imdb_id": "tt0198781"
+        },
+        {
+          "rank": 202,
+          "title": "Blade Runner",
+          "year": 1982,
+          "imdb_id": "tt0083658"
+        },
+        {
+          "rank": 203,
+          "title": "Gone Girl",
+          "year": 2014,
+          "imdb_id": "tt2267998"
+        },
+        {
+          "rank": 204,
+          "title": "Ford v Ferrari",
+          "year": 2019,
+          "imdb_id": "tt1950186"
+        },
+        {
+          "rank": 205,
+          "title": "Jaws",
+          "year": 1975,
+          "imdb_id": "tt0073195"
+        },
+        {
+          "rank": 206,
+          "title": "In the Name of the Father",
+          "year": 1993,
+          "imdb_id": "tt0107207"
+        },
+        {
+          "rank": 207,
+          "title": "Chainsaw Man - The Movie: Reze Arc",
+          "year": 2025,
+          "imdb_id": "tt30472557"
+        },
+        {
+          "rank": 208,
+          "title": "Spider-Man: No Way Home",
+          "year": 2021,
+          "imdb_id": "tt10872600"
+        },
+        {
+          "rank": 209,
+          "title": "Wild Tales",
+          "year": 2014,
+          "imdb_id": "tt3011894"
+        },
+        {
+          "rank": 210,
+          "title": "A Silent Voice: The Movie",
+          "year": 2016,
+          "imdb_id": "tt5323662"
+        },
+        {
+          "rank": 211,
+          "title": "The Gold Rush",
+          "year": 1925,
+          "imdb_id": "tt0015864"
+        },
+        {
+          "rank": 212,
+          "title": "Mary and Max",
+          "year": 2009,
+          "imdb_id": "tt0978762"
+        },
+        {
+          "rank": 213,
+          "title": "Sherlock Jr.",
+          "year": 1924,
+          "imdb_id": "tt0015324"
+        },
+        {
+          "rank": 214,
+          "title": "The Deer Hunter",
+          "year": 1978,
+          "imdb_id": "tt0077416"
+        },
+        {
+          "rank": 215,
+          "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+          "year": 2003,
+          "imdb_id": "tt0325980"
+        },
+        {
+          "rank": 216,
+          "title": "Logan",
+          "year": 2017,
+          "imdb_id": "tt3315342"
+        },
+        {
+          "rank": 217,
+          "title": "The Wages of Fear",
+          "year": 1953,
+          "imdb_id": "tt0046268"
+        },
+        {
+          "rank": 218,
+          "title": "Rocky",
+          "year": 1976,
+          "imdb_id": "tt0075148"
+        },
+        {
+          "rank": 219,
+          "title": "The General",
+          "year": 1926,
+          "imdb_id": "tt0017925"
+        },
+        {
+          "rank": 220,
+          "title": "Mr. Smith Goes to Washington",
+          "year": 1939,
+          "imdb_id": "tt0031679"
+        },
+        {
+          "rank": 221,
+          "title": "Tokyo Story",
+          "year": 1953,
+          "imdb_id": "tt0046438"
+        },
+        {
+          "rank": 222,
+          "title": "Maharaja",
+          "year": 2024,
+          "imdb_id": "tt26548265"
+        },
+        {
+          "rank": 223,
+          "title": "La haine",
+          "year": 1995,
+          "imdb_id": "tt0113247"
+        },
+        {
+          "rank": 224,
+          "title": "The Sound of Music",
+          "year": 1965,
+          "imdb_id": "tt0059742"
+        },
+        {
+          "rank": 225,
+          "title": "Spotlight",
+          "year": 2015,
+          "imdb_id": "tt1895587"
+        },
+        {
+          "rank": 226,
+          "title": "Jai Bhim",
+          "year": 2021,
+          "imdb_id": "tt15097216"
+        },
+        {
+          "rank": 227,
+          "title": "The Terminator",
+          "year": 1984,
+          "imdb_id": "tt0088247"
+        },
+        {
+          "rank": 228,
+          "title": "Wild Strawberries",
+          "year": 1957,
+          "imdb_id": "tt0050986"
+        },
+        {
+          "rank": 229,
+          "title": "On the Waterfront",
+          "year": 1954,
+          "imdb_id": "tt0047296"
+        },
+        {
+          "rank": 230,
+          "title": "The Best Years of Our Lives",
+          "year": 1946,
+          "imdb_id": "tt0036868"
+        },
+        {
+          "rank": 231,
+          "title": "The Third Man",
+          "year": 1949,
+          "imdb_id": "tt0041959"
+        },
+        {
+          "rank": 232,
+          "title": "The Big Lebowski",
+          "year": 1998,
+          "imdb_id": "tt0118715"
+        },
+        {
+          "rank": 233,
+          "title": "The Incredibles",
+          "year": 2004,
+          "imdb_id": "tt0317705"
+        },
+        {
+          "rank": 234,
+          "title": "Hachi: A Dog's Tale",
+          "year": 2009,
+          "imdb_id": "tt1028532"
+        },
+        {
+          "rank": 235,
+          "title": "Before Sunset",
+          "year": 2004,
+          "imdb_id": "tt0381681"
+        },
+        {
+          "rank": 236,
+          "title": "The Iron Giant",
+          "year": 1999,
+          "imdb_id": "tt0129167"
+        },
+        {
+          "rank": 237,
+          "title": "The Exorcist",
+          "year": 1973,
+          "imdb_id": "tt0070047"
+        },
+        {
+          "rank": 238,
+          "title": "Room",
+          "year": 2015,
+          "imdb_id": "tt3170832"
+        },
+        {
+          "rank": 239,
+          "title": "Hotel Rwanda",
+          "year": 2004,
+          "imdb_id": "tt0395169"
+        },
+        {
+          "rank": 240,
+          "title": "Platoon",
+          "year": 1986,
+          "imdb_id": "tt0091763"
+        },
+        {
+          "rank": 241,
+          "title": "The Seventh Seal",
+          "year": 1957,
+          "imdb_id": "tt0050976"
+        },
+        {
+          "rank": 242,
+          "title": "Rush",
+          "year": 2013,
+          "imdb_id": "tt1979320"
+        },
+        {
+          "rank": 243,
+          "title": "The Battle of Algiers",
+          "year": 1966,
+          "imdb_id": "tt0058946"
+        },
+        {
+          "rank": 244,
+          "title": "Stand by Me",
+          "year": 1986,
+          "imdb_id": "tt0092005"
+        },
+        {
+          "rank": 245,
+          "title": "The Wizard of Oz",
+          "year": 1939,
+          "imdb_id": "tt0032138"
+        },
+        {
+          "rank": 246,
+          "title": "My Father and My Son",
+          "year": 2005,
+          "imdb_id": "tt0476735"
+        },
+        {
+          "rank": 247,
+          "title": "The Passion of Joan of Arc",
+          "year": 1928,
+          "imdb_id": "tt0019254"
+        },
+        {
+          "rank": 248,
+          "title": "Drishyam",
+          "year": 2015,
+          "imdb_id": "tt4430212"
+        },
+        {
+          "rank": 249,
+          "title": "Gangs of Wasseypur",
+          "year": 2012,
+          "imdb_id": "tt1954470"
+        },
+        {
+          "rank": 250,
+          "title": "Miracle in Cell No. 7",
+          "year": 2019,
+          "imdb_id": "tt10431500"
+        }
+      ]
+    }
+  }
+}

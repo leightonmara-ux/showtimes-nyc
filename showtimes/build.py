@@ -14,6 +14,7 @@ folder works both behind server.py and on GitHub Pages (refreshed by .github/wor
 import json
 
 import digest
+import lists
 import ratings
 import server
 
@@ -25,8 +26,10 @@ def main():
     rating_map = ratings.public(ratings.load())
     events = server.load_events()
     (OUT / "data").mkdir(exist_ok=True)
-    (OUT / "data" / "showtimes.json").write_text(json.dumps({**data, "events": events, "ratings": rating_map}))
-    dg = digest.build(data, rating_map, events.get("events", []))
+    list_index = lists.index()
+    (OUT / "data" / "showtimes.json").write_text(json.dumps({**data, "events": events, "ratings": rating_map,
+                                                             "lists": list_index}))
+    dg = digest.build(data, rating_map, events.get("events", []), list_index)
     (OUT / "data" / "digest.json").write_text(json.dumps(dg))
     (OUT / "digest.html").write_text(digest.render_html(dg))
     for t in data["theaters"]:

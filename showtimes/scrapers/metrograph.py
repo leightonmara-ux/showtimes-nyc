@@ -64,7 +64,9 @@ def _parse_film(block, day):
     m = re.search(r'<a href="([^"]+)" class="title">(.*?)</a>', block, re.S)
     if not m:
         return []
-    film_url, title = m.group(1), m.group(2)
+    film_url, title = m.group(1).replace("&amp;", "&"), m.group(2)
+    if film_url.startswith("/"):
+        film_url = "https://metrograph.com" + film_url
     meta = re.search(r'class="film-metadata">(.*?)</div>', block, re.S)
     fmt = None
     if meta:
@@ -86,9 +88,11 @@ def _parse_film(block, day):
             continue
         href = re.search(r'href="([^"]+)"', attrs)
         if href:
-            out.append(show(title, iso(day, h, mi), href.group(1).replace("&amp;", "&"), fmt))
+            out.append(show(title, iso(day, h, mi), href.group(1).replace("&amp;", "&"), fmt,
+                            film_url=film_url))
         else:  # Metrograph drops the ticket link once a show sells out
-            out.append(show(title, iso(day, h, mi), film_url, ", ".join(x for x in (fmt, "Sold out") if x)))
+            out.append(show(title, iso(day, h, mi), film_url, ", ".join(x for x in (fmt, "Sold out") if x),
+                            film_url=film_url))
     return out
 
 

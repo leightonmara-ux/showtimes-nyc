@@ -84,7 +84,8 @@ def fetch(days=7):
                     key = (title.lower(), s)
                     if key in out:
                         continue
-                    rec = show(title, s, st.get("ticketsUrl") or film_url, _format(st, title))
+                    rec = show(title, s, st.get("ticketsUrl") or film_url, _format(st, title),
+                               film_url=film_url)
                     rec["series"] = None  # API carries no series field; see module doc
                     out[key] = rec
                 except Exception:

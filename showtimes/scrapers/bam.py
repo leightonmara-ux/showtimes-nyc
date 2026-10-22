@@ -227,7 +227,8 @@ def fetch(days=7):
                 fmt.append("Open Captions")
             key = (title.lower(), s)
             if key not in out:
-                out[key] = show(title, s, url, ", ".join(fmt) or None)
+                out[key] = show(title, s, url, ", ".join(fmt) or None,
+                                film_url=_abs(more))
         except Exception:
             continue
 

@@ -5,6 +5,7 @@ ticketing), scoped to the /prospectpark/ site so Williamsburg is excluded.
 
   /wp-json/nj/v1/showtime/listings   every upcoming showtime + purchase URL
   /wp-json/nj/v1/show?include=...    film metadata (format taxonomy: 35mm, DCP...)
+                                     and the film page permalink ("link")
   /wp-json/nj/v1/showtime?showdate=  per-showtime flags (open captions, extras)
 """
 import datetime as dt
@@ -27,8 +28,9 @@ NOTABLE_FORMATS = {"35mm", "70mm", "16mm", "4k", "3d", "vhs", "imax"}
 
 
 def _film_formats(movie_ids):
-    """movie_id -> format label (e.g. '35mm'), best effort."""
+    """-> (movie_id -> format label (e.g. '35mm'), movie_id -> film page URL), best effort."""
     out = {}
+    links = {}
     ids = [str(i) for i in movie_ids]
     for i in range(0, len(ids), 50):
         try:
@@ -37,6 +39,8 @@ def _film_formats(movie_ids):
             continue
         for film in data if isinstance(data, list) else []:
             try:
+                if film.get("link"):
+                    links[int(film["id"])] = film["link"]
                 names = [clean(t.get("name")) for t in (film.get("format") or [])
                          if isinstance(t, dict)]
                 names = [n for n in names if n.lower() in NOTABLE_FORMATS]
@@ -44,7 +48,7 @@ def _film_formats(movie_ids):
                     out[int(film["id"])] = ", ".join(names)
             except Exception:
                 continue
-    return out
+    return out, links
 
 
 def _showtime_extras(dates):
@@ -102,7 +106,7 @@ def fetch(days: int = 7) -> List[dict]:
         except Exception:
             continue
 
-    formats = _film_formats(sorted({r[1] for r in rows}))
+    formats, links = _film_formats(sorted({r[1] for r in rows}))
     extras = _showtime_extras(sorted({r[0].date() for r in rows}))
 
     out, seen = [], set()
@@ -119,6 +123,7 @@ def fetch(days: int = 7) -> List[dict]:
         if key in seen:
             continue
         seen.add(key)
-        out.append(show(names[mid], start, url, ", ".join(labels) or None))
+        out.append(show(names[mid], start, url, ", ".join(labels) or None,
+                        film_url=links.get(mid)))
     out.sort(key=lambda s: (s["start"], s["title"]))
     return out
