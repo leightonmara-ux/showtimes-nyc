@@ -128,6 +128,12 @@ class Handler(SimpleHTTPRequestHandler):
         else:
             super().do_GET()
 
+    def end_headers(self):
+        # Make browsers recheck the app's files, so an update shows up on the next load.
+        if not self.path.startswith("/api/"):
+            self.send_header("Cache-Control", "no-cache")
+        super().end_headers()
+
     def log_message(self, fmt, *args):
         if "/api/" in (args[0] if args else ""):
             super().log_message(fmt, *args)

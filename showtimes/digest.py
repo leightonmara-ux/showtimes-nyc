@@ -92,6 +92,9 @@ def build(data, rating_map, events, start=None, days=7, top=TOP_N):
         shows = [s for th in theaters for s in th["shows"]]
         last = max(s["start"] for s in shows)
         notes = sorted(f["formats"])
+        year = f["rating"].get("year")
+        if year and year >= start.year - 1:  # released this year or last: a new film, not a revival
+            notes.insert(0, "New")
         if len(shows) <= 2:
             notes.append("Only %d showing%s" % (len(shows), "" if len(shows) == 1 else "s"))
         r = f["rating"]
@@ -167,8 +170,11 @@ def render_html(dg):
                 " · ".join('<a href="%s" style="color:#c2361f">%s</a>' % (e(s["url"] or "#"), _when(s["start"]))
                            for s in th["shows"][:8]) + (" +%d more" % (len(th["shows"]) - 8) if len(th["shows"]) > 8 else ""))
             for th in p["theaters"])
-        tags = "".join('<span style="display:inline-block;background:#f0e8dd;border-radius:999px;padding:2px 8px;'
-                       'margin:6px 4px 0 0;font-size:12px">%s</span>' % e(n) for n in p["notes"])
+        tags = "".join(('<span style="display:inline-block;background:#c2361f;color:#fff;border-radius:999px;padding:2px 8px;'
+                        'margin:6px 4px 0 0;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase">New</span>'
+                        if n == "New" else
+                        '<span style="display:inline-block;background:#f0e8dd;border-radius:999px;padding:2px 8px;'
+                        'margin:6px 4px 0 0;font-size:12px">%s</span>' % e(n)) for n in p["notes"])
         tags += "".join('<span style="display:inline-block;background:#fbefcf;color:#7a5600;border-radius:999px;'
                         'padding:2px 8px;margin:6px 4px 0 0;font-size:12px;font-weight:600">★ %s</span>' % e(ev["name"])
                         for ev in p["events"])
