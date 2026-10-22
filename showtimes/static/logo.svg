@@ -1,9 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <title>Showtimes NYC</title>
   <!-- Full-bleed square: iOS and Android round the corners themselves. -->
-  <defs>
-    <clipPath id="door"><rect x="420" y="96" width="58" height="94"/></clipPath>
-  </defs>
   <!-- painted sky -->
   <rect width="512" height="512" fill="#8fb3dc"/>
   <g fill="#ffffff" opacity=".7">
@@ -22,13 +19,7 @@
     <rect x="312" y="230" width="52" height="40" fill="#5f86ba"/><rect x="312" y="230" width="52" height="9" fill="#b9cfea"/>
     <rect x="364" y="190" width="52" height="40" fill="#5f86ba"/><rect x="364" y="190" width="52" height="9" fill="#b9cfea"/>
   </g>
-  <!-- the door: a dark little room with a projector running -->
-  <g clip-path="url(#door)">
-    <rect x="420" y="96" width="58" height="94" fill="#14110f"/>
-    <path d="M444 108 L454 108 L476 190 L422 190 Z" fill="#fff6dc" opacity=".14"/>
-    <path d="M446 108 L452 108 L462 190 L436 190 Z" fill="#fff6dc" opacity=".16"/>
-    <ellipse cx="449" cy="189" rx="20" ry="4" fill="#fff6dc" opacity=".3"/>
-    <rect x="442" y="100" width="14" height="9" rx="1.5" fill="#f4f1ea"/>
-  </g>
+  <!-- the exit door -->
+  <rect x="420" y="96" width="58" height="94" fill="#14110f"/>
   <rect x="420" y="96" width="58" height="94" fill="none" stroke="#e8eef6" stroke-width="5"/>
 </svg>
