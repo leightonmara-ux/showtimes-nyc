@@ -85,8 +85,10 @@ def _parse_film(block, day):
         except ValueError:
             continue
         href = re.search(r'href="([^"]+)"', attrs)
-        url = href.group(1).replace("&amp;", "&") if href else film_url
-        out.append(show(title, iso(day, h, mi), url, fmt))
+        if href:
+            out.append(show(title, iso(day, h, mi), href.group(1).replace("&amp;", "&"), fmt))
+        else:  # Metrograph drops the ticket link once a show sells out
+            out.append(show(title, iso(day, h, mi), film_url, ", ".join(x for x in (fmt, "Sold out") if x)))
     return out
 
 
