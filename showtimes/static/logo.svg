@@ -2,37 +2,33 @@
   <title>Showtimes NYC</title>
   <!-- Full-bleed square: iOS and Android round the corners themselves. -->
   <defs>
-    <clipPath id="door"><rect x="336" y="56" width="134" height="196"/></clipPath>
+    <clipPath id="door"><rect x="420" y="96" width="58" height="94"/></clipPath>
   </defs>
   <!-- painted sky -->
   <rect width="512" height="512" fill="#8fb3dc"/>
   <g fill="#ffffff" opacity=".7">
-    <ellipse cx="120" cy="110" rx="130" ry="34"/>
-    <ellipse cx="180" cy="250" rx="100" ry="22"/>
-    <ellipse cx="420" cy="350" rx="150" ry="36"/>
-    <ellipse cx="110" cy="420" rx="110" ry="24"/>
+    <ellipse cx="110" cy="120" rx="120" ry="34"/>
+    <ellipse cx="400" cy="300" rx="150" ry="38"/>
+    <ellipse cx="160" cy="360" rx="110" ry="26"/>
+    <ellipse cx="330" cy="200" rx="90" ry="20"/>
   </g>
-  <!-- floating staircase up to the door -->
+  <!-- floating staircase -->
   <g>
-    <rect x="52" y="440" width="48" height="38" fill="#5f86ba"/><rect x="52" y="440" width="48" height="9" fill="#b9cfea"/>
-    <rect x="100" y="402" width="48" height="38" fill="#5f86ba"/><rect x="100" y="402" width="48" height="9" fill="#b9cfea"/>
-    <rect x="148" y="364" width="48" height="38" fill="#5f86ba"/><rect x="148" y="364" width="48" height="9" fill="#b9cfea"/>
-    <rect x="196" y="326" width="48" height="38" fill="#5f86ba"/><rect x="196" y="326" width="48" height="9" fill="#b9cfea"/>
-    <rect x="244" y="288" width="48" height="38" fill="#5f86ba"/><rect x="244" y="288" width="48" height="9" fill="#b9cfea"/>
-    <rect x="292" y="252" width="48" height="36" fill="#5f86ba"/><rect x="292" y="252" width="48" height="9" fill="#b9cfea"/>
+    <rect x="52" y="430" width="52" height="40" fill="#5f86ba"/><rect x="52" y="430" width="52" height="9" fill="#b9cfea"/>
+    <rect x="104" y="390" width="52" height="40" fill="#5f86ba"/><rect x="104" y="390" width="52" height="9" fill="#b9cfea"/>
+    <rect x="156" y="350" width="52" height="40" fill="#5f86ba"/><rect x="156" y="350" width="52" height="9" fill="#b9cfea"/>
+    <rect x="208" y="310" width="52" height="40" fill="#5f86ba"/><rect x="208" y="310" width="52" height="9" fill="#b9cfea"/>
+    <rect x="260" y="270" width="52" height="40" fill="#5f86ba"/><rect x="260" y="270" width="52" height="9" fill="#b9cfea"/>
+    <rect x="312" y="230" width="52" height="40" fill="#5f86ba"/><rect x="312" y="230" width="52" height="9" fill="#b9cfea"/>
+    <rect x="364" y="190" width="52" height="40" fill="#5f86ba"/><rect x="364" y="190" width="52" height="9" fill="#b9cfea"/>
   </g>
-  <!-- through the door: a dark theater, a projector beam, a flower crown -->
+  <!-- the door: a dark little room with a projector running -->
   <g clip-path="url(#door)">
-    <rect x="336" y="56" width="134" height="196" fill="#0d0c0b"/>
-    <path d="M396 82 L410 82 L462 252 L344 252 Z" fill="#ffffff" opacity=".12"/>
-    <path d="M399 82 L407 82 L436 252 L370 252 Z" fill="#ffffff" opacity=".12"/>
-    <rect x="393" y="66" width="20" height="16" rx="2" fill="#f4f1ea"/>
-    <path d="M362 252 C366 224 382 214 403 214 C424 214 440 224 444 252 Z" fill="#cfc9bf"/>
-    <ellipse cx="403" cy="196" rx="19" ry="22" fill="#d9d4cc"/>
-    <g fill="#ffffff">
-      <circle cx="386" cy="181" r="5"/><circle cx="394" cy="175" r="5.5"/><circle cx="403" cy="173" r="6"/>
-      <circle cx="412" cy="175" r="5.5"/><circle cx="420" cy="181" r="5"/>
-    </g>
+    <rect x="420" y="96" width="58" height="94" fill="#14110f"/>
+    <path d="M444 108 L454 108 L476 190 L422 190 Z" fill="#fff6dc" opacity=".14"/>
+    <path d="M446 108 L452 108 L462 190 L436 190 Z" fill="#fff6dc" opacity=".16"/>
+    <ellipse cx="449" cy="189" rx="20" ry="4" fill="#fff6dc" opacity=".3"/>
+    <rect x="442" y="100" width="14" height="9" rx="1.5" fill="#f4f1ea"/>
   </g>
-  <rect x="336" y="56" width="134" height="196" fill="none" stroke="#f2f5fa" stroke-width="7"/>
+  <rect x="420" y="96" width="58" height="94" fill="none" stroke="#e8eef6" stroke-width="5"/>
 </svg>
