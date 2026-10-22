@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Showtimes NYC</title>
+  <!-- Full-bleed square: iOS and Android round the corners themselves. -->
+  <defs>
+    <clipPath id="door"><rect x="336" y="56" width="134" height="196"/></clipPath>
+  </defs>
+  <!-- painted sky -->
+  <rect width="512" height="512" fill="#8fb3dc"/>
+  <g fill="#ffffff" opacity=".7">
+    <ellipse cx="120" cy="110" rx="130" ry="34"/>
+    <ellipse cx="180" cy="250" rx="100" ry="22"/>
+    <ellipse cx="420" cy="350" rx="150" ry="36"/>
+    <ellipse cx="110" cy="420" rx="110" ry="24"/>
+  </g>
+  <!-- floating staircase up to the door -->
+  <g>
+    <rect x="52" y="440" width="48" height="38" fill="#5f86ba"/><rect x="52" y="440" width="48" height="9" fill="#b9cfea"/>
+    <rect x="100" y="402" width="48" height="38" fill="#5f86ba"/><rect x="100" y="402" width="48" height="9" fill="#b9cfea"/>
+    <rect x="148" y="364" width="48" height="38" fill="#5f86ba"/><rect x="148" y="364" width="48" height="9" fill="#b9cfea"/>
+    <rect x="196" y="326" width="48" height="38" fill="#5f86ba"/><rect x="196" y="326" width="48" height="9" fill="#b9cfea"/>
+    <rect x="244" y="288" width="48" height="38" fill="#5f86ba"/><rect x="244" y="288" width="48" height="9" fill="#b9cfea"/>
+    <rect x="292" y="252" width="48" height="36" fill="#5f86ba"/><rect x="292" y="252" width="48" height="9" fill="#b9cfea"/>
+  </g>
+  <!-- through the door: a dark theater, a projector beam, a flower crown -->
+  <g clip-path="url(#door)">
+    <rect x="336" y="56" width="134" height="196" fill="#0d0c0b"/>
+    <path d="M396 82 L410 82 L462 252 L344 252 Z" fill="#ffffff" opacity=".12"/>
+    <path d="M399 82 L407 82 L436 252 L370 252 Z" fill="#ffffff" opacity=".12"/>
+    <rect x="393" y="66" width="20" height="16" rx="2" fill="#f4f1ea"/>
+    <path d="M362 252 C366 224 382 214 403 214 C424 214 440 224 444 252 Z" fill="#cfc9bf"/>
+    <ellipse cx="403" cy="196" rx="19" ry="22" fill="#d9d4cc"/>
+    <g fill="#ffffff">
+      <circle cx="386" cy="181" r="5"/><circle cx="394" cy="175" r="5.5"/><circle cx="403" cy="173" r="6"/>
+      <circle cx="412" cy="175" r="5.5"/><circle cx="420" cy="181" r="5"/>
+    </g>
+  </g>
+  <rect x="336" y="56" width="134" height="196" fill="none" stroke="#f2f5fa" stroke-width="7"/>
+</svg>
