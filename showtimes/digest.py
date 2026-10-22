@@ -18,8 +18,7 @@ from scrapers.common import now
 
 ROOT = Path(__file__).parent
 TOP_N = 12
-PRIOR = 6.8      # score a film with no votes regresses toward (out of 10)
-PRIOR_VOTES = 800  # votes needed before a film's own rating counts half
+MIN_RATINGS = 100  # below this a score is a handful of opinions, not a rating; such films are left out
 FILM_PRINT = ("35mm", "16mm", "70mm")
 
 
@@ -28,14 +27,13 @@ def norm_title(t):
 
 
 def score(r):
-    """One 0-10 number from Letterboxd (x2) and IMDb, shrunk toward PRIOR when few people have rated it,
-    so a 4.6 from 40 festival-goers doesn't outrank a 4.3 from 100,000."""
+    """Average of Letterboxd (x2, so both are out of 10) and IMDb: highest rated wins, however many
+    people rated it, as long as at least MIN_RATINGS did."""
     vals = [v for v in ((r.get("lb") or 0) * 2, r.get("imdb") or 0) if v]
-    if not vals:
-        return None
-    raw = sum(vals) / len(vals)
     n = (r.get("lb_count") or 0) + (r.get("imdb_votes") or 0)
-    return (n * raw + PRIOR_VOTES * PRIOR) / (n + PRIOR_VOTES)
+    if not vals or n < MIN_RATINGS:
+        return None
+    return sum(vals) / len(vals)
 
 
 def event_for(show, theater_id, events):
@@ -187,8 +185,8 @@ def render_html(dg):
 <h1 style="margin:6px 0 2px;font:700 30px/1.1 Georgia,serif">This week's best</h1>
 <div style="color:#776d63">%s · top %d of %d rated films playing</div>
 <table style="width:100%%;border-collapse:collapse;margin-top:8px">%s</table>
-<p style="color:#776d63;font-size:12px;margin-top:20px">Ranked by Letterboxd and IMDb ratings combined, weighted by how many
-people have rated each film. Generated %s.</p>
+<p style="color:#776d63;font-size:12px;margin-top:20px">Ranked by the average of Letterboxd and IMDb ratings (films with
+at least 100 ratings). Generated %s.</p>
 </div></body></html>""" % (_range(dg["start"], dg["end"]), len(dg["picks"]), dg["rated_films"], "".join(rows),
                            e(dg["generated"].replace("T", " ")))
 

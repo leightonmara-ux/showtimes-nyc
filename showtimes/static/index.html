@@ -351,7 +351,7 @@ async function renderBest() {
   const now = nyNow();
   const range = fmtRange(digest.start, digest.end);
   const head = `<div class="best-head"><h2>This week's best</h2><a href="digest.html" target="_blank" rel="noopener">Digest page ↗</a></div>
-    <p class="sub">${range} · top ${digest.picks.length} of ${digest.rated_films} rated films, by Letterboxd + IMDb, weighted by number of ratings.</p>`;
+    <p class="sub">${range} · top ${digest.picks.length} of ${digest.rated_films} rated films, by average Letterboxd + IMDb rating.</p>`;
   if (!digest.picks.length) { $("out").innerHTML = head + `<div class="empty">Ratings are still loading. Check back in a minute.</div>`; return; }
   $("out").innerHTML = head + digest.picks.map((p, i) => {
     const r = { lb: p.lb, lb_count: p.lb_count, lb_url: p.lb_url, imdb: p.imdb, imdb_votes: p.imdb_votes, imdb_url: p.imdb_url, year: p.year };

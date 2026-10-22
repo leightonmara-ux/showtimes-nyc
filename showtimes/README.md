@@ -38,9 +38,9 @@ refreshed in the background, so showtimes never wait on it. If a film matches th
 year next to the rating is the giveaway), pin the right one in `ratings_overrides.json`:
 `{"Title as the theater lists it": "tt0049261"}`.
 
-The **Best** tab ranks the films playing in the next 7 days: Letterboxd (×2) and IMDb averaged, then
-pulled toward 6.8 when few people have rated a film, so tiny-sample festival scores don't top the
-list. The same ranking is at http://localhost:8000/digest as an email-friendly page, and
+The **Best** tab ranks the films playing in the next 7 days by their average rating: Letterboxd (×2,
+so both are out of 10) and IMDb. How many people rated a film doesn't affect its rank; films with
+fewer than 100 ratings in total are left out, since their scores are only a handful of opinions. The same ranking is at http://localhost:8000/digest as an email-friendly page, and
 `python3 digest.py` prints it as text (`--html` writes `digest.html`).
 
 ## Hosting it online (GitHub Pages)
